@@ -91,7 +91,7 @@ namespace WOWS_Training_Room
         public static bool isTrainingRoomEnabled()
         {
             bool isEnabled = false;
-            if (Convert.ToBoolean(getData(TRAINING)))
+            if (Convert.ToString(getData(TRAINING)) == ENABLED)
             {
                 isEnabled = true;
             }
@@ -104,7 +104,7 @@ namespace WOWS_Training_Room
         public static bool isReplayModeEnabled()
         {
             bool isEnabled = false;
-            if (Convert.ToBoolean(getData(REPLAY)))
+            if (Convert.ToString(getData(REPLAY)) == ENABLED)
             {
                 isEnabled = true;
             }
@@ -112,5 +112,9 @@ namespace WOWS_Training_Room
             Console.WriteLine(Convert.ToString(isEnabled));
             return isEnabled;
         }
+
+        // TODO: Check this only during first launch
+        // Check if Training Room is already enabled
+        // Check if Replay Mode is already enabled
     }
 }

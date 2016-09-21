@@ -32,11 +32,13 @@
             this.replayMode = new System.Windows.Forms.Button();
             this.pathBox = new System.Windows.Forms.TextBox();
             this.gameDirectoryLabel = new System.Windows.Forms.Label();
+            this.launchGameBtn = new System.Windows.Forms.Button();
+            this.uninstallGameBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // trainingRoom
             // 
-            this.trainingRoom.Location = new System.Drawing.Point(44, 34);
+            this.trainingRoom.Location = new System.Drawing.Point(44, 25);
             this.trainingRoom.Name = "trainingRoom";
             this.trainingRoom.Size = new System.Drawing.Size(199, 23);
             this.trainingRoom.TabIndex = 0;
@@ -46,7 +48,7 @@
             // 
             // replayMode
             // 
-            this.replayMode.Location = new System.Drawing.Point(44, 63);
+            this.replayMode.Location = new System.Drawing.Point(44, 54);
             this.replayMode.Name = "replayMode";
             this.replayMode.Size = new System.Drawing.Size(199, 23);
             this.replayMode.TabIndex = 1;
@@ -70,11 +72,33 @@
             this.gameDirectoryLabel.TabIndex = 3;
             this.gameDirectoryLabel.Text = "Game directory";
             // 
+            // launchGameBtn
+            // 
+            this.launchGameBtn.Location = new System.Drawing.Point(12, 135);
+            this.launchGameBtn.Name = "launchGameBtn";
+            this.launchGameBtn.Size = new System.Drawing.Size(110, 23);
+            this.launchGameBtn.TabIndex = 4;
+            this.launchGameBtn.Text = "Launch Game";
+            this.launchGameBtn.UseVisualStyleBackColor = true;
+            this.launchGameBtn.Click += new System.EventHandler(this.launchGameBtn_Click);
+            // 
+            // uninstallGameBtn
+            // 
+            this.uninstallGameBtn.Location = new System.Drawing.Point(164, 135);
+            this.uninstallGameBtn.Name = "uninstallGameBtn";
+            this.uninstallGameBtn.Size = new System.Drawing.Size(110, 23);
+            this.uninstallGameBtn.TabIndex = 5;
+            this.uninstallGameBtn.Text = "Uninstall Game";
+            this.uninstallGameBtn.UseVisualStyleBackColor = true;
+            this.uninstallGameBtn.Click += new System.EventHandler(this.uninstallGameBtn_Click);
+            // 
             // WOWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 162);
+            this.Controls.Add(this.uninstallGameBtn);
+            this.Controls.Add(this.launchGameBtn);
             this.Controls.Add(this.gameDirectoryLabel);
             this.Controls.Add(this.pathBox);
             this.Controls.Add(this.replayMode);
@@ -96,6 +120,8 @@
         private System.Windows.Forms.Button replayMode;
         private System.Windows.Forms.TextBox pathBox;
         private System.Windows.Forms.Label gameDirectoryLabel;
+        private System.Windows.Forms.Button launchGameBtn;
+        private System.Windows.Forms.Button uninstallGameBtn;
     }
 }
 

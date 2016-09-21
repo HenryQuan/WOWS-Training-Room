@@ -79,9 +79,12 @@
             this.Controls.Add(this.pathBox);
             this.Controls.Add(this.replayMode);
             this.Controls.Add(this.trainingRoom);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WOWS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WOWS Training Room";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WOWS_FormClosing);
+            this.Load += new System.EventHandler(this.WOWS_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

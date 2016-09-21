@@ -4,37 +4,37 @@ using System.Xml;
 
 namespace WOWS_Training_Room
 {
-    public class DataStorage
+    public static class DataStorage
     {
         // Constants for setting up.
-        public const int DEFAULT_VALUE = -1;
+        public const int DEFAULT_VALUE = 1;
         public const int INITIAL_SETUP = 0;
-        public const int SETUP_SUCCESS = 1;
-        public const int SETUP_ERROR = 2;
 
         // Constants for whether training room and replay mode is enabled.
-        public const int ENABLED = 1;
-        public const int DISABLED = 0;
+        public const string ENABLED = "1";
+        public const string DISABLED = "0";
+
+        // Constants for all data entry
+        public const string PATH = @"Path:";
+        public const string TRAINING = @"TrainingRoom:";
+        public const string REPLAY = @"ReplayMode:";
+        public const string LAUNCH = @"Launch:";
 
         // Getting Username and Documents path
         public static string userDocument = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public static string gamePath = "";
         public static string targetPath = userDocument + @"\WOWSPreferencesEditor";
         public static string targetFile = targetPath + @"\data.txt";
+        public static int launchTime = 0;
 
         // Setup data document and data.xml
-        public int setup()
+        public static void setup()
         {
-            int returnValue = DEFAULT_VALUE;
-
             // Test if the directory is correct.
             Console.WriteLine(targetPath);
-
             // If there is no such directory, create one.
             if (!Directory.Exists(targetPath))
             {
                 Directory.CreateDirectory(targetPath);
-                returnValue = INITIAL_SETUP;
             }
 
             // If there is no data.txt, create one as well.
@@ -42,48 +42,61 @@ namespace WOWS_Training_Room
             {
                 // Create and close this file
                 File.Create(targetFile).Close();
-                returnValue = INITIAL_SETUP;
             }
 
-            if (File.ReadAllText(targetFile) == "")
+            if (File.ReadAllText(targetFile) == @"")
             {
-                // 0 means disabled, 1 means enabled.
-                
+                string[] lines = { PATH, TRAINING + DISABLED, REPLAY + DISABLED, LAUNCH + "0" };
+                File.WriteAllLines(targetFile, lines);
             }
+        }
 
+        // Getting data from data.txt
+        public static string getData(string data)
+        {
+            string temp = "";
             foreach (string line in File.ReadLines(targetFile))
             {
-                if (line.Contains(@"Path:"))
+                
+                if (line.Contains(data))
                 {
-                    gamePath = line.Substring(5);
-                    Console.WriteLine(gamePath);
+                    temp = line.Substring(line.IndexOf(':')+1);
+                    Console.WriteLine(temp);
                 }
             }
 
-            if (gamePath == "")
-            {
-                returnValue = INITIAL_SETUP;
-            }
+            return temp;
         }
 
-        // Getting game path from data.xml
-        public static string getGamePath()
+        // Setting new data to data.txt
+        public static void setData(string entry, string oldData, string newData)
         {
-            return gamePath;
-        }
-        
-        // Setting new game path from WOWS form.
-        public static string setGamePath(string path)
-        {
-            gamePath = path;
-            return gamePath;
+            string temp = File.ReadAllText(targetFile);
+            // If there is no oldDate
+            if (oldData == "")
+            {
+                temp = temp.Replace(entry, entry + newData);
+            }
+            else
+            {
+                temp = temp.Replace(entry + oldData, entry + newData);
+            }
+
+            Console.WriteLine(temp);
+
+            File.WriteAllText(targetFile, temp);
         }
 
         // Check if training room is enabled
         public static bool isTrainingRoomEnabled()
         {
             bool isEnabled = false;
+            if (Convert.ToBoolean(getData(TRAINING)))
+            {
+                isEnabled = true;
+            }
 
+            Console.WriteLine(Convert.ToString(isEnabled));
             return isEnabled;
         }
 
@@ -91,7 +104,12 @@ namespace WOWS_Training_Room
         public static bool isReplayModeEnabled()
         {
             bool isEnabled = false;
+            if (Convert.ToBoolean(getData(REPLAY)))
+            {
+                isEnabled = true;
+            }
 
+            Console.WriteLine(Convert.ToString(isEnabled));
             return isEnabled;
         }
     }

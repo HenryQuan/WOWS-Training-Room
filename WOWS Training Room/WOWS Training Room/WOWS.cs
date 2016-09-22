@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-using System.Xml;
 
 namespace WOWS_Training_Room
 {
@@ -48,14 +47,26 @@ namespace WOWS_Training_Room
             // Load correct text for training room and replay mode
             bool training = DataStorage.isTrainingRoomEnabled();
             bool replay = DataStorage.isReplayModeEnabled();
-
-            if (training == true)
+            bool backup = DataStorage.isBackup();
+            // Only if the path is correct, we could do some stuff
+            if (DataStorage.isGamepathCorrect == true)
             {
-                this.trainingRoom.Text = TRAINING_DISABLE;
+                if (training == true)
+                {
+                    this.trainingRoom.Text = TRAINING_DISABLE;
+                }
+                if (replay == true)
+                {
+                    this.replayMode.Text = REPLAY_DISABLE;
+                }
             }
-            if (replay == true)
+
+
+            if (DataStorage.isGamepathCorrect == true && backup == false)
             {
-                this.replayMode.Text = REPLAY_DISABLE;
+                // When the path is correct, create a backup to prevent incident.
+                File.Copy(DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML, DataStorage.targetPath + DataStorage.PREFER_XML);
+                DataStorage.setData(DataStorage.BACKUP, @"0", @"1");
             }
         }
 
@@ -212,6 +223,10 @@ namespace WOWS_Training_Room
                 {
                     // Just ignore those two line
                     if (data.Contains(DataStorage.REPLAY_MODE) || data.Contains(DataStorage.REPLAY_UPDATE)) { }
+                    else if (newData == @"")
+                    {
+                        newData += data;
+                    } 
                     else
                     {
                         newData += "\n" + data;

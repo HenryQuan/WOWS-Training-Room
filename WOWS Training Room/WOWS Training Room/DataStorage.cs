@@ -5,10 +5,6 @@ namespace WOWS_Training_Room
 {
     public static class DataStorage
     {
-        // Constants for setting up.
-        public const int DEFAULT_VALUE = 1;
-        public const int INITIAL_SETUP = 0;
-
         // Constants for whether training room and replay mode is enabled.
         public const string ENABLED = "1";
         public const string DISABLED = "0";
@@ -18,6 +14,7 @@ namespace WOWS_Training_Room
         public const string TRAINING = @"TrainingRoom:";
         public const string REPLAY = @"ReplayMode:";
         public const string LAUNCH = @"Launch:";
+        public const string BACKUP = @"Backup:";
 
         // Constants for battle types
         public const string RANDOM_BATTLE = @"RandomBattle";
@@ -42,27 +39,26 @@ namespace WOWS_Training_Room
         public static string targetFile = targetPath + @"\data.txt";
         public static int launchTime = 0;
 
+        public static bool isGamepathCorrect = isGamePathLegal(getData(PATH));
+
+        static DataStorage()
+        {
+            // Well, nothing here
+        }
+
         // Setup data document and data.xml
         public static void setup()
         {
-            // Test if the directory is correct.
-            Console.WriteLine(targetPath);
-            // If there is no such directory, create one.
-            if (!Directory.Exists(targetPath))
-            {
-                Directory.CreateDirectory(targetPath);
-            }
-
-            // If there is no data.txt, create one as well.
+            // If there is no data.txt, create one.
             if (!File.Exists(targetFile))
             {
+                Directory.CreateDirectory(targetPath);
+
                 // Create and close this file
                 File.Create(targetFile).Close();
-            }
 
-            if (File.ReadAllText(targetFile) == @"")
-            {
-                string[] lines = { PATH, TRAINING + DISABLED, REPLAY + DISABLED, LAUNCH + "0" };
+                // Some preset texts
+                string[] lines = { PATH, TRAINING + DISABLED, REPLAY + DISABLED, LAUNCH + "0", BACKUP + "0" };
                 File.WriteAllLines(targetFile, lines);
             }
         }
@@ -103,16 +99,14 @@ namespace WOWS_Training_Room
             File.WriteAllText(targetFile, temp);
         }
 
-        // Check if training room is enabled
-        public static bool isTrainingRoomEnabled()
+        public static bool isBackup()
         {
             bool isEnabled = false;
 
             // Get the path for preferences.xml
-            string preference = getData(PATH) + PREFER_XML;
-            string temp = File.ReadAllText(preference);
+            string backup = getData(BACKUP);
 
-            if (temp.Contains(TRAINING_BATTLE))
+            if (backup == @"1")
             {
                 isEnabled = true;
             }
@@ -121,20 +115,46 @@ namespace WOWS_Training_Room
             return isEnabled;
         }
 
+        // Check if training room is enabled
+        public static bool isTrainingRoomEnabled()
+        {
+            bool isEnabled = false;
+
+            if (isGamepathCorrect)
+            {
+                // Get the path for preferences.xml
+                string preference = getData(PATH) + PREFER_XML;
+                string temp = File.ReadAllText(preference);
+
+                if (temp.Contains(TRAINING_BATTLE))
+                {
+                    isEnabled = true;
+                }
+
+                Console.WriteLine(Convert.ToString(isEnabled));
+            }
+            
+            return isEnabled;
+        }
+
         // Check if replay mode is enabled
         public static bool isReplayModeEnabled()
         {
             bool isEnabled = false;
 
-            string preference = getData(PATH) + PREFER_XML;
-
-            // Load our preferences.xml
-            if (File.ReadAllText(preference).Contains(REPLAY_MODE))
+            if (isGamepathCorrect)
             {
-                isEnabled = true;
-            }
+                string preference = getData(PATH) + PREFER_XML;
 
-            Console.WriteLine(Convert.ToString(isEnabled));
+                // Load our preferences.xml
+                if (File.ReadAllText(preference).Contains(REPLAY_MODE))
+                {
+                    isEnabled = true;
+                }
+
+                Console.WriteLine(Convert.ToString(isEnabled));
+            }
+                
             return isEnabled;
         }
 

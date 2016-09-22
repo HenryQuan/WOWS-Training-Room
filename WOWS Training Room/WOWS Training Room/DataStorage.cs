@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Xml;
 
 namespace WOWS_Training_Room
 {
@@ -19,6 +18,16 @@ namespace WOWS_Training_Room
         public const string TRAINING = @"TrainingRoom:";
         public const string REPLAY = @"ReplayMode:";
         public const string LAUNCH = @"Launch:";
+
+        // Constant for battle types
+        public const string RANDOM_BATTLE = @"RandomBattle";
+        public const string COOP_BATTLE = @"CooperationBattle";
+        public const string TRAINING_BATTLE = @"TrainingBattle";
+
+        // Constant for important files.
+        public const string GAME_EXE = @"\WoWSLauncher.exe";
+        public const string UNINSTALL_EXE = @"\unins000.exe";
+        public const string PREFER_XML = @"\preferences.xml";
 
         // Getting Username and Documents path
         public static string userDocument = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -91,7 +100,12 @@ namespace WOWS_Training_Room
         public static bool isTrainingRoomEnabled()
         {
             bool isEnabled = false;
-            if (Convert.ToString(getData(TRAINING)) == ENABLED)
+
+            // Get the path for preferences.xml
+            string preference = getData(PATH) + PREFER_XML;
+            string temp = File.ReadAllText(preference);
+
+            if (temp.Contains(TRAINING_BATTLE))
             {
                 isEnabled = true;
             }
@@ -104,17 +118,23 @@ namespace WOWS_Training_Room
         public static bool isReplayModeEnabled()
         {
             bool isEnabled = false;
-            if (Convert.ToString(getData(REPLAY)) == ENABLED)
-            {
-                isEnabled = true;
-            }
 
             Console.WriteLine(Convert.ToString(isEnabled));
             return isEnabled;
         }
 
-        // TODO: Check this only during first launch
-        // Check if Training Room is already enabled
-        // Check if Replay Mode is already enabled
+        // Check whether user provides correct game path
+        public static bool isGamePathLegal(string gamepath)
+        {
+            bool isLegal = false;
+
+            // WoWsLauncher.exe is found in this folder, it should be legal path
+            if (File.Exists(gamepath + @"\WoWSLauncher.exe"))
+            {
+                isLegal = true;
+            }
+
+            return isLegal;
+        }
     }
 }

@@ -138,6 +138,9 @@ namespace WOWS_Training_Room
         {
             gamepathSetting();
 
+            // This is not a quick way of doing it.
+            string newData = @"";
+
             // Check if path is correct
             var preference = DataStorage.getData(DataStorage.PATH);
             if (DataStorage.isGamePathLegal(preference) == true)
@@ -145,7 +148,79 @@ namespace WOWS_Training_Room
                 preference += DataStorage.PREFER_XML;
             }
 
-            
+            if (replayMode.Text == REPLAY_ENABLE)
+            {
+                replayMode.Text = REPLAY_DISABLE;
+
+                int index = 0;
+                foreach (string data in File.ReadLines(preference))
+                {
+                    // Just ignore those two line
+                    if (data.Contains(DataStorage.SCRIPTS))
+                    {
+                        index++;
+                        // For a .xml file, there are 2 same texts.
+                        //
+                        //<root>
+                        //    xxxxx
+                        //    xxxxx
+                        //<root>
+                        //
+                        if (index != 2)
+                        {
+                            if (newData == "")
+                            {
+                                newData += data;
+                            }
+                            else
+                            {
+                                newData += "\n" + data;
+                            }
+                        }
+                        else 
+                        {
+                            // I have no idea how to use xmlDocument to edit this file.
+                            newData += "\n" + DataStorage.REPLAY_MODE_TEXT;
+                            newData += "\n" + DataStorage.REPLAY_UPDATE_TEXT;
+                            newData += "\n" + data;
+
+                            // Change index to 0 again, to prevent running codes above
+                            index = 0;
+                        }
+                    }
+                    else
+                    {
+                        if (index != 2)
+                        {
+                            if (newData == "")
+                            {
+                                newData += data;
+                            }
+                            else
+                            {
+                                newData += "\n" + data;
+                            }
+                        }                      
+                    }
+                } 
+            }
+            else
+            {
+                replayMode.Text = REPLAY_ENABLE;
+
+                foreach (string data in File.ReadLines(preference))
+                {
+                    // Just ignore those two line
+                    if (data.Contains(DataStorage.REPLAY_MODE) || data.Contains(DataStorage.REPLAY_UPDATE)) { }
+                    else
+                    {
+                        newData += "\n" + data;
+                    }
+                }
+            }
+
+            File.Delete(preference);
+            File.WriteAllText(preference, newData);
             // Could only change this once per launch
             replayMode.Enabled = false;
         }

@@ -76,11 +76,28 @@ namespace WOWS_Training_Room
                     {
                         temp = temp.Replace(RANDOM, TRAINING);
                     }
-                    if (temp.Contains(COOP))
+                    else if (temp.Contains(COOP))
                     {
                         temp = temp.Replace(COOP, TRAINING);
                     }
-                    this.trainingRoom.Text = TRAINING_DISABLE;
+
+                    else
+                    {
+                        // If it is training room already
+                        var reply = MessageBox.Show("Do you want to enable Training Room?", "Oops >_<", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (reply == DialogResult.Yes)
+                        {
+                            // Then we dont have to do anything
+                            this.trainingRoom.Text = TRAINING_ENABLE;
+                        }
+                        else
+                        {
+                            // If not, change it back.
+                            temp = temp.Replace(TRAINING, RANDOM);
+                            this.trainingRoom.Text = TRAINING_DISABLE;
+                        }
+                    }
+                    
                     string oldTraining = DataStorage.getData(DataStorage.TRAINING);
                     DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.ENABLED);
                 }
@@ -201,7 +218,7 @@ namespace WOWS_Training_Room
             }
             else
             {
-                MessageBox.Show("WOWS ASIA" + "\n" + "Worse Server Ever!");
+                MessageBox.Show("WOWS ASIA" + "\n" + "Worst Server Ever!");
                 Process.Start(gamePath + UNINSTALL_EXE);
             }
             Application.Exit();

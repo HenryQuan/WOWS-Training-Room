@@ -1,0 +1,2 @@
+<isReplayEnabled> true </isReplayEnabled>
+       <ReplayCameraUpdate> 30 </ReplayCameraUpdate>

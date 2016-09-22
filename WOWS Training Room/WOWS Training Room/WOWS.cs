@@ -13,6 +13,22 @@ namespace WOWS_Training_Room
         const string REPLAY_ENABLE = @"Enable Replay Mode";
         const string REPLAY_DISABLE = @"Disable Replay Mode";
 
+        // Constants for whether training room and replay mode is enabled.
+        public const string ENABLED = "1";
+        public const string DISABLED = "0";
+
+        // Constants for all data entry
+        public const string PATH = @"Path:";
+        public const string TRAINING = @"TrainingRoom:";
+        public const string REPLAY = @"ReplayMode:";
+        public const string LAUNCH = @"Launch:";
+        public const string BACKUP = @"Backup:";
+
+        // Getting Username and Documents path
+        public static string userDocument = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static string targetPath = userDocument + @"\WOWSPreferencesEditor";
+        public static string targetFile = targetPath + @"\data.txt";
+
         const string ERROR_MESSAGE = @"Error! Please enter the correct path.";
 
         public WOWS()
@@ -20,53 +36,85 @@ namespace WOWS_Training_Room
             InitializeComponent();
         }
 
+        // Setup data document and data.xml
+        public static void setup()
+        {
+            // Test if the directory is correct.
+            Console.WriteLine(targetPath);
+
+            // If there is no such directory, create one.
+            if (!Directory.Exists(targetPath))
+            {
+                Directory.CreateDirectory(targetPath);
+            }
+
+            // If there is no data.txt, create one as well.
+            if (!File.Exists(targetFile))
+            {
+                // Create and close this file
+                File.Create(targetFile).Close();
+            }
+
+
+            if (File.ReadAllText(targetFile) == @"")
+            {
+                string[] lines = { PATH, TRAINING + DISABLED, REPLAY + DISABLED, LAUNCH + "0" };
+                File.WriteAllLines(targetFile, lines);
+            }
+        }
+
         private void WOWS_Load(object sender, EventArgs e)
         {
-            // Setup for DataStorage
-            DataStorage.setup();
-
-            // Load saved address
-            this.pathBox.Text = DataStorage.getData(DataStorage.PATH);
-
-            int oldLaunchTime = Convert.ToInt32(DataStorage.getData(DataStorage.LAUNCH));
-            int newLaunchTime = oldLaunchTime;
-            if (oldLaunchTime == 0)
+            if (!File.Exists(targetFile))
             {
-                // During first Launch popup a message
-                MessageBox.Show(@"This is the first launch of this program" + "\n" + @"Please paste your game path into the textbox below.");
+                // Setup for DataStorage
+                setup();
             }
-            else if (oldLaunchTime < 0)
+            else
             {
-                MessageBox.Show(@"Please do not edit data.txt");
-                newLaunchTime = 0;
-            }
-            // Add one to launchTime and save it.
-            newLaunchTime += 1;
-            DataStorage.setData(DataStorage.LAUNCH, Convert.ToString(oldLaunchTime), Convert.ToString(newLaunchTime));
+                // Load saved address
+                this.pathBox.Text = DataStorage.getData(DataStorage.PATH);
 
-            // Load correct text for training room and replay mode
-            bool training = DataStorage.isTrainingRoomEnabled();
-            bool replay = DataStorage.isReplayModeEnabled();
-            bool backup = DataStorage.isBackup();
-            // Only if the path is correct, we could do some stuff
-            if (DataStorage.isGamepathCorrect == true)
-            {
-                if (training == true)
+                int oldLaunchTime = Convert.ToInt32(DataStorage.getData(DataStorage.LAUNCH));
+                int newLaunchTime = oldLaunchTime;
+                if (oldLaunchTime == 0)
                 {
-                    this.trainingRoom.Text = TRAINING_DISABLE;
+                    // During first Launch popup a message
+                    MessageBox.Show(@"This is the first launch of this program" + "\n" + @"Please paste your game path into the textbox below.");
                 }
-                if (replay == true)
+                else if (oldLaunchTime < 0)
                 {
-                    this.replayMode.Text = REPLAY_DISABLE;
+                    MessageBox.Show(@"Please do not edit data.txt");
+                    newLaunchTime = 0;
                 }
-            }
+                // Add one to launchTime and save it.
+                newLaunchTime += 1;
+                DataStorage.setData(DataStorage.LAUNCH, Convert.ToString(oldLaunchTime), Convert.ToString(newLaunchTime));
+
+                // Load correct text for training room and replay mode
+                bool training = DataStorage.isTrainingRoomEnabled();
+                bool replay = DataStorage.isReplayModeEnabled();
+                bool backup = DataStorage.isBackup();
+                // Only if the path is correct, we could do some stuff
+                if (DataStorage.isGamepathCorrect == true)
+                {
+                    if (training == true)
+                    {
+                        this.trainingRoom.Text = TRAINING_DISABLE;
+                    }
+                    if (replay == true)
+                    {
+                        this.replayMode.Text = REPLAY_DISABLE;
+                    }
+                }
 
 
-            if (DataStorage.isGamepathCorrect == true && backup == false)
-            {
-                // When the path is correct, create a backup to prevent incident.
-                File.Copy(DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML, DataStorage.targetPath + DataStorage.PREFER_XML);
-                DataStorage.setData(DataStorage.BACKUP, @"0", @"1");
+                if (DataStorage.isGamepathCorrect == true && backup == false)
+                {
+                    // When the path is correct, create a backup to prevent incident.
+                    File.Copy(DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML, targetPath + DataStorage.PREFER_XML);
+                    DataStorage.setData(DataStorage.BACKUP, @"0", @"1");
+                }
             }
         }
 

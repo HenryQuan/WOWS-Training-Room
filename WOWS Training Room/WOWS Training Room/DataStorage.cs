@@ -33,10 +33,10 @@ namespace WOWS_Training_Room
         public const string REPLAY_MODE_TEXT = @"<isReplayEnabled>true</isReplayEnabled>";
         public const string REPLAY_UPDATE_TEXT = @"<ReplayCameraUpdate>30</ReplayCameraUpdate>";
 
-        // Getting Username and Documents path
         public static string userDocument = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public static string targetPath = userDocument + @"\WOWSPreferencesEditor";
         public static string targetFile = targetPath + @"\data.txt";
+
         public static int launchTime = 0;
 
         public static bool isGamepathCorrect = isGamePathLegal(getData(PATH));
@@ -46,22 +46,7 @@ namespace WOWS_Training_Room
             // Well, nothing here
         }
 
-        // Setup data document and data.xml
-        public static void setup()
-        {
-            // If there is no data.txt, create one.
-            if (!File.Exists(targetFile))
-            {
-                Directory.CreateDirectory(targetPath);
-
-                // Create and close this file
-                File.Create(targetFile).Close();
-
-                // Some preset texts
-                string[] lines = { PATH, TRAINING + DISABLED, REPLAY + DISABLED, LAUNCH + "0", BACKUP + "0" };
-                File.WriteAllLines(targetFile, lines);
-            }
-        }
+        
 
         // Getting data from data.txt
         public static string getData(string data)

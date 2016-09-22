@@ -19,15 +19,22 @@ namespace WOWS_Training_Room
         public const string REPLAY = @"ReplayMode:";
         public const string LAUNCH = @"Launch:";
 
-        // Constant for battle types
+        // Constants for battle types
         public const string RANDOM_BATTLE = @"RandomBattle";
-        public const string COOP_BATTLE = @"CooperationBattle";
+        public const string COOP_BATTLE = @"CooperativeBattle";
         public const string TRAINING_BATTLE = @"TrainingBattle";
 
-        // Constant for important files.
+        // Constants for important files.
         public const string GAME_EXE = @"\WoWSLauncher.exe";
         public const string UNINSTALL_EXE = @"\unins000.exe";
         public const string PREFER_XML = @"\preferences.xml";
+
+        // Constants for replay mode
+        public const string SCRIPTS = @"scriptsPreferences";
+        public const string REPLAY_MODE = @"isReplayEnabled";
+        public const string REPLAY_UPDATE = @"ReplayCameraUpdate";
+        public const string REPLAY_MODE_TEXT = @"<isReplayEnabled>true</isReplayEnabled>";
+        public const string REPLAY_UPDATE_TEXT = @"<ReplayCameraUpdate>30</ReplayCameraUpdate>";
 
         // Getting Username and Documents path
         public static string userDocument = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -118,6 +125,14 @@ namespace WOWS_Training_Room
         public static bool isReplayModeEnabled()
         {
             bool isEnabled = false;
+
+            string preference = getData(PATH) + PREFER_XML;
+
+            // Load our preferences.xml
+            if (File.ReadAllText(preference).Contains(REPLAY_MODE))
+            {
+                isEnabled = true;
+            }
 
             Console.WriteLine(Convert.ToString(isEnabled));
             return isEnabled;

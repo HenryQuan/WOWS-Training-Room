@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Xml;
 
 namespace WOWS_Training_Room
 {
@@ -144,39 +145,7 @@ namespace WOWS_Training_Room
                 preference += DataStorage.PREFER_XML;
             }
 
-            // Not quite a quick mathod, but you do the same way
-            var temp = File.ReadAllText(preference);
-
-            // Change the text for this button
-            if (trainingRoom.Text == TRAINING_ENABLE)
-            {
-                trainingRoom.Text = TRAINING_DISABLE;
-                temp = temp.Replace(DataStorage.TRAINING_BATTLE, DataStorage.RANDOM_BATTLE);
-
-                // Ssave changes to data.txt
-                string oldTraining = DataStorage.getData(DataStorage.TRAINING);
-                DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.DISABLED);
-            }
-            else
-            {
-                trainingRoom.Text = TRAINING_ENABLE;
-                if (temp.Contains(DataStorage.RANDOM_BATTLE))
-                {
-                    temp = temp.Replace(DataStorage.RANDOM_BATTLE, DataStorage.TRAINING_BATTLE);
-                }
-                else if (temp.Contains(DataStorage.COOP_BATTLE))
-                {
-                    temp = temp.Replace(DataStorage.COOP_BATTLE, DataStorage.TRAINING_BATTLE);
-                }
-
-                // Ssave changes to data.txt
-                string oldTraining = DataStorage.getData(DataStorage.TRAINING);
-                DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.ENABLED);
-            }
-
-            // Save changes to preferences.xml
-            File.WriteAllText(preference, temp);
-
+            
             // Could only change this once per launch
             replayMode.Enabled = false;
         }

@@ -39,8 +39,6 @@ namespace WOWS_Training_Room
 
         public static int launchTime = 0;
 
-        public static bool isGamepathCorrect = isGamePathLegal(getData(PATH));
-
         static DataStorage()
         {
             // Well, nothing here
@@ -103,7 +101,7 @@ namespace WOWS_Training_Room
         {
             bool isEnabled = false;
 
-            if (isGamepathCorrect)
+            if (isGamePathLegal(getData(PATH)))
             {
                 // Get the path for preferences.xml
                 string preference = getData(PATH) + PREFER_XML;
@@ -125,7 +123,7 @@ namespace WOWS_Training_Room
         {
             bool isEnabled = false;
 
-            if (isGamepathCorrect)
+            if (isGamePathLegal(getData(PATH)))
             {
                 string preference = getData(PATH) + PREFER_XML;
 

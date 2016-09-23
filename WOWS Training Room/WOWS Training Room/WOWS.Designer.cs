@@ -103,6 +103,7 @@
             this.Controls.Add(this.pathBox);
             this.Controls.Add(this.replayMode);
             this.Controls.Add(this.trainingRoom);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WOWS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

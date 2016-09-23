@@ -58,64 +58,61 @@ namespace WOWS_Training_Room
 
             if (File.ReadAllText(targetFile) == @"")
             {
-                string[] lines = { PATH, TRAINING + DISABLED, REPLAY + DISABLED, LAUNCH + "0" };
+                string[] lines = { PATH, LAUNCH + "0" };
                 File.WriteAllLines(targetFile, lines);
             }
         }
 
         private void WOWS_Load(object sender, EventArgs e)
         {
-            if (!File.Exists(targetFile))
+            
+            // Load saved address
+            pathBox.Text = DataStorage.getData(DataStorage.PATH);
+
+            int oldLaunchTime = Convert.ToInt32(DataStorage.getData(DataStorage.LAUNCH));
+            int newLaunchTime = oldLaunchTime;
+            if (oldLaunchTime == 0)
             {
-                // Setup for DataStorage
-                setup();
+                // During first Launch popup a message
+                MessageBox.Show(@"This is the first launch of this program" + "\n" + @"Please paste your game path into the textbox below.");
             }
-            else
+            else if (oldLaunchTime < 0)
             {
-                // Load saved address
-                this.pathBox.Text = DataStorage.getData(DataStorage.PATH);
+                MessageBox.Show(@"Please do not edit data.txt");
+                newLaunchTime = 0;
+            }
+            // Add one to launchTime and save it.
+            newLaunchTime += 1;
+            DataStorage.setData(DataStorage.LAUNCH, Convert.ToString(oldLaunchTime), Convert.ToString(newLaunchTime));
 
-                int oldLaunchTime = Convert.ToInt32(DataStorage.getData(DataStorage.LAUNCH));
-                int newLaunchTime = oldLaunchTime;
-                if (oldLaunchTime == 0)
+            // Load correct text for training room and replay mode
+            bool training = DataStorage.isTrainingRoomEnabled();
+            bool replay = DataStorage.isReplayModeEnabled();
+            bool backup = DataStorage.isBackup();
+            // Only if the path is correct, we could do some stuff
+            if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true)
+            {
+                if (training == true)
                 {
-                    // During first Launch popup a message
-                    MessageBox.Show(@"This is the first launch of this program" + "\n" + @"Please paste your game path into the textbox below.");
+                    this.trainingRoom.Text = TRAINING_DISABLE;
                 }
-                else if (oldLaunchTime < 0)
+                if (replay == true)
                 {
-                    MessageBox.Show(@"Please do not edit data.txt");
-                    newLaunchTime = 0;
+                    this.replayMode.Text = REPLAY_DISABLE;
                 }
-                // Add one to launchTime and save it.
-                newLaunchTime += 1;
-                DataStorage.setData(DataStorage.LAUNCH, Convert.ToString(oldLaunchTime), Convert.ToString(newLaunchTime));
+            }
 
-                // Load correct text for training room and replay mode
-                bool training = DataStorage.isTrainingRoomEnabled();
-                bool replay = DataStorage.isReplayModeEnabled();
-                bool backup = DataStorage.isBackup();
-                // Only if the path is correct, we could do some stuff
-                if (DataStorage.isGamepathCorrect == true)
+
+            if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true && backup == false)
+            {
+                // When the path is correct, create a backup to prevent incident.
+                if (!File.Exists(targetPath + DataStorage.PREFER_XML))
                 {
-                    if (training == true)
-                    {
-                        this.trainingRoom.Text = TRAINING_DISABLE;
-                    }
-                    if (replay == true)
-                    {
-                        this.replayMode.Text = REPLAY_DISABLE;
-                    }
-                }
-
-
-                if (DataStorage.isGamepathCorrect == true && backup == false)
-                {
-                    // When the path is correct, create a backup to prevent incident.
                     File.Copy(DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML, targetPath + DataStorage.PREFER_XML);
                     DataStorage.setData(DataStorage.BACKUP, @"0", @"1");
                 }
             }
+            
         }
 
         // Get gamepath from anywhere possible
@@ -148,10 +145,10 @@ namespace WOWS_Training_Room
         private void trainingRoom_Click(object sender, EventArgs e)
         {
             gamepathSetting();
-            if (DataStorage.isGamepathCorrect == true)
+            if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true)
             {
                 // Check if path is correct
-                var preference = DataStorage.getData(DataStorage.PATH);
+                var preference = DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML;
 
                 // Not quite a quick mathod, but you do the same way
                 var temp = File.ReadAllText(preference);
@@ -160,15 +157,7 @@ namespace WOWS_Training_Room
                 if (trainingRoom.Text == TRAINING_ENABLE)
                 {
                     trainingRoom.Text = TRAINING_DISABLE;
-                    temp = temp.Replace(DataStorage.TRAINING_BATTLE, DataStorage.RANDOM_BATTLE);
 
-                    // Ssave changes to data.txt
-                    string oldTraining = DataStorage.getData(DataStorage.TRAINING);
-                    DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.DISABLED);
-                }
-                else
-                {
-                    trainingRoom.Text = TRAINING_ENABLE;
                     if (temp.Contains(DataStorage.RANDOM_BATTLE))
                     {
                         temp = temp.Replace(DataStorage.RANDOM_BATTLE, DataStorage.TRAINING_BATTLE);
@@ -177,8 +166,17 @@ namespace WOWS_Training_Room
                     {
                         temp = temp.Replace(DataStorage.COOP_BATTLE, DataStorage.TRAINING_BATTLE);
                     }
-
+                    
                     // Ssave changes to data.txt
+                    string oldTraining = DataStorage.getData(DataStorage.TRAINING);
+                    DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.DISABLED);
+                }
+                else
+                {
+                    trainingRoom.Text = TRAINING_ENABLE;
+                    temp = temp.Replace(DataStorage.TRAINING_BATTLE, DataStorage.RANDOM_BATTLE);
+
+                    // save changes to data.txt
                     string oldTraining = DataStorage.getData(DataStorage.TRAINING);
                     DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.ENABLED);
                 }
@@ -195,7 +193,7 @@ namespace WOWS_Training_Room
         {
             gamepathSetting();
 
-            if (DataStorage.isGamepathCorrect == true)
+            if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true)
             {
                 // This is not a quick way of doing it.
                 string newData = @"";
@@ -307,7 +305,7 @@ namespace WOWS_Training_Room
         {
             gamepathSetting();
 
-            if (DataStorage.isGamepathCorrect == true)
+            if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true)
             {
                 // Launch game launcher >_<
                 string gamePath = DataStorage.getData(DataStorage.PATH);
@@ -327,7 +325,7 @@ namespace WOWS_Training_Room
         {
             gamepathSetting();
 
-            if (DataStorage.isGamepathCorrect == true)
+            if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true)
             {
                 // WOWS ASIA Worse Server Ever
                 string gamePath = DataStorage.getData(DataStorage.PATH);

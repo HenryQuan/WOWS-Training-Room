@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WOWS_Training_Room
@@ -16,7 +14,20 @@ namespace WOWS_Training_Room
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WOWS());
+
+            if (!File.Exists(WOWS.targetFile))
+            {
+                // Setup for DataStorage
+                WOWS.setup();
+
+                // GamePath for first launch
+                Application.Run(new gamePath());
+                Application.Run(new WOWS());
+            }
+            else
+            {
+                Application.Run(new WOWS());
+            }     
         }
     }
 }

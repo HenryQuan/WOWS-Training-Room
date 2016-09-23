@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WOWS));
             this.trainingRoom = new System.Windows.Forms.Button();
             this.replayMode = new System.Windows.Forms.Button();
             this.pathBox = new System.Windows.Forms.TextBox();
@@ -62,6 +63,7 @@
             this.pathBox.Name = "pathBox";
             this.pathBox.Size = new System.Drawing.Size(262, 20);
             this.pathBox.TabIndex = 2;
+            this.pathBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gameDirectoryLabel
             // 
@@ -104,6 +106,7 @@
             this.Controls.Add(this.replayMode);
             this.Controls.Add(this.trainingRoom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WOWS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

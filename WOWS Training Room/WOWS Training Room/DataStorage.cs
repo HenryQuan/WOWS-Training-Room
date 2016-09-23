@@ -46,8 +46,6 @@ namespace WOWS_Training_Room
             // Well, nothing here
         }
 
-        
-
         // Getting data from data.txt
         public static string getData(string data)
         {

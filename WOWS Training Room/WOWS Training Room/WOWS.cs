@@ -148,144 +148,141 @@ namespace WOWS_Training_Room
         private void trainingRoom_Click(object sender, EventArgs e)
         {
             gamepathSetting();
-
-            // Check if path is correct
-            var preference = DataStorage.getData(DataStorage.PATH);
-            if (DataStorage.isGamePathLegal(preference) == true)
+            if (DataStorage.isGamepathCorrect == true)
             {
-                preference += DataStorage.PREFER_XML;
-            }
+                // Check if path is correct
+                var preference = DataStorage.getData(DataStorage.PATH);
 
-            // Not quite a quick mathod, but you do the same way
-            var temp = File.ReadAllText(preference);
+                // Not quite a quick mathod, but you do the same way
+                var temp = File.ReadAllText(preference);
 
-            // Change the text for this button
-            if (trainingRoom.Text == TRAINING_ENABLE)
-            {
-                trainingRoom.Text = TRAINING_DISABLE;
-                temp = temp.Replace(DataStorage.TRAINING_BATTLE, DataStorage.RANDOM_BATTLE);
-
-                // Ssave changes to data.txt
-                string oldTraining = DataStorage.getData(DataStorage.TRAINING);
-                DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.DISABLED);
-            }
-            else
-            {
-                trainingRoom.Text = TRAINING_ENABLE;
-                if (temp.Contains(DataStorage.RANDOM_BATTLE))
+                // Change the text for this button
+                if (trainingRoom.Text == TRAINING_ENABLE)
                 {
-                    temp = temp.Replace(DataStorage.RANDOM_BATTLE, DataStorage.TRAINING_BATTLE);
+                    trainingRoom.Text = TRAINING_DISABLE;
+                    temp = temp.Replace(DataStorage.TRAINING_BATTLE, DataStorage.RANDOM_BATTLE);
+
+                    // Ssave changes to data.txt
+                    string oldTraining = DataStorage.getData(DataStorage.TRAINING);
+                    DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.DISABLED);
                 }
-                else if (temp.Contains(DataStorage.COOP_BATTLE))
+                else
                 {
-                    temp = temp.Replace(DataStorage.COOP_BATTLE, DataStorage.TRAINING_BATTLE);
+                    trainingRoom.Text = TRAINING_ENABLE;
+                    if (temp.Contains(DataStorage.RANDOM_BATTLE))
+                    {
+                        temp = temp.Replace(DataStorage.RANDOM_BATTLE, DataStorage.TRAINING_BATTLE);
+                    }
+                    else if (temp.Contains(DataStorage.COOP_BATTLE))
+                    {
+                        temp = temp.Replace(DataStorage.COOP_BATTLE, DataStorage.TRAINING_BATTLE);
+                    }
+
+                    // Ssave changes to data.txt
+                    string oldTraining = DataStorage.getData(DataStorage.TRAINING);
+                    DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.ENABLED);
                 }
 
-                // Ssave changes to data.txt
-                string oldTraining = DataStorage.getData(DataStorage.TRAINING);
-                DataStorage.setData(DataStorage.TRAINING, oldTraining, DataStorage.ENABLED);
+                // Save changes to preferences.xml
+                File.WriteAllText(preference, temp);
+
+                // Only could do this once per launch
+                trainingRoom.Enabled = false;
             }
-
-            // Save changes to preferences.xml
-            File.WriteAllText(preference, temp);
-
-            // Only could do this once per launch
-            trainingRoom.Enabled = false;
         }
 
         private void replayMode_Click(object sender, EventArgs e)
         {
             gamepathSetting();
 
-            // This is not a quick way of doing it.
-            string newData = @"";
-
-            // Check if path is correct
-            var preference = DataStorage.getData(DataStorage.PATH);
-            if (DataStorage.isGamePathLegal(preference) == true)
+            if (DataStorage.isGamepathCorrect == true)
             {
-                preference += DataStorage.PREFER_XML;
-            }
+                // This is not a quick way of doing it.
+                string newData = @"";
 
-            if (replayMode.Text == REPLAY_ENABLE)
-            {
-                replayMode.Text = REPLAY_DISABLE;
+                // Make the path string
+                var preference = DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML;
 
-                int index = 0;
-                foreach (string data in File.ReadLines(preference))
+                if (replayMode.Text == REPLAY_ENABLE)
                 {
-                    // Just ignore those two line
-                    if (data.Contains(DataStorage.SCRIPTS))
+                    replayMode.Text = REPLAY_DISABLE;
+
+                    int index = 0;
+                    foreach (string data in File.ReadLines(preference))
                     {
-                        index++;
-                        // For a .xml file, there are 2 same texts.
-                        //
-                        //<root>
-                        //    xxxxx
-                        //    xxxxx
-                        //<root>
-                        //
-                        if (index != 2)
+                        // Just ignore those two line
+                        if (data.Contains(DataStorage.SCRIPTS))
                         {
-                            if (newData == "")
+                            index++;
+                            // For a .xml file, there are 2 same texts.
+                            //
+                            //<root>
+                            //    xxxxx
+                            //    xxxxx
+                            //<root>
+                            //
+                            if (index != 2)
                             {
-                                newData += data;
+                                if (newData == "")
+                                {
+                                    newData += data;
+                                }
+                                else
+                                {
+                                    newData += "\n" + data;
+                                }
                             }
                             else
                             {
+                                // I have no idea how to use xmlDocument to edit this file.
+                                newData += "\n" + DataStorage.REPLAY_MODE_TEXT;
+                                newData += "\n" + DataStorage.REPLAY_UPDATE_TEXT;
                                 newData += "\n" + data;
+
+                                // Change index to 0 again, to prevent running codes above
+                                index = 0;
                             }
                         }
-                        else 
+                        else
                         {
-                            // I have no idea how to use xmlDocument to edit this file.
-                            newData += "\n" + DataStorage.REPLAY_MODE_TEXT;
-                            newData += "\n" + DataStorage.REPLAY_UPDATE_TEXT;
-                            newData += "\n" + data;
-
-                            // Change index to 0 again, to prevent running codes above
-                            index = 0;
+                            if (index != 2)
+                            {
+                                if (newData == "")
+                                {
+                                    newData += data;
+                                }
+                                else
+                                {
+                                    newData += "\n" + data;
+                                }
+                            }
                         }
-                    }
-                    else
-                    {
-                        if (index != 2)
-                        {
-                            if (newData == "")
-                            {
-                                newData += data;
-                            }
-                            else
-                            {
-                                newData += "\n" + data;
-                            }
-                        }                      
-                    }
-                } 
-            }
-            else
-            {
-                replayMode.Text = REPLAY_ENABLE;
-
-                foreach (string data in File.ReadLines(preference))
-                {
-                    // Just ignore those two line
-                    if (data.Contains(DataStorage.REPLAY_MODE) || data.Contains(DataStorage.REPLAY_UPDATE)) { }
-                    else if (newData == @"")
-                    {
-                        newData += data;
-                    } 
-                    else
-                    {
-                        newData += "\n" + data;
                     }
                 }
-            }
+                else
+                {
+                    replayMode.Text = REPLAY_ENABLE;
 
-            File.Delete(preference);
-            File.WriteAllText(preference, newData);
-            // Could only change this once per launch
-            replayMode.Enabled = false;
+                    foreach (string data in File.ReadLines(preference))
+                    {
+                        // Just ignore those two line
+                        if (data.Contains(DataStorage.REPLAY_MODE) || data.Contains(DataStorage.REPLAY_UPDATE)) { }
+                        else if (newData == @"")
+                        {
+                            newData += data;
+                        }
+                        else
+                        {
+                            newData += "\n" + data;
+                        }
+                    }
+                }
+
+                File.Delete(preference);
+                File.WriteAllText(preference, newData);
+                // Could only change this once per launch
+                replayMode.Enabled = false;
+            }
         }
 
         private void WOWS_FormClosing(object sender, FormClosingEventArgs e)
@@ -310,34 +307,41 @@ namespace WOWS_Training_Room
         {
             gamepathSetting();
 
-            // Launch game launcher >_<
-            string gamePath = DataStorage.getData(DataStorage.PATH);
-            if (!File.Exists(gamePath + DataStorage.GAME_EXE))
+            if (DataStorage.isGamepathCorrect == true)
             {
-                MessageBox.Show(ERROR_MESSAGE);
-            } else
-            {
-                Process.Start(gamePath + DataStorage.GAME_EXE);
-            }
-            Application.Exit();
+                // Launch game launcher >_<
+                string gamePath = DataStorage.getData(DataStorage.PATH);
+                if (!File.Exists(gamePath + DataStorage.GAME_EXE))
+                {
+                    MessageBox.Show(ERROR_MESSAGE);
+                }
+                else
+                {
+                    Process.Start(gamePath + DataStorage.GAME_EXE);
+                }
+                Application.Exit();
+            } 
         }
 
         private void uninstallGameBtn_Click(object sender, EventArgs e)
         {
             gamepathSetting();
 
-            // WOWS ASIA Worse Server Ever
-            string gamePath = DataStorage.getData(DataStorage.PATH);
-            if (!File.Exists(gamePath + DataStorage.UNINSTALL_EXE))
+            if (DataStorage.isGamepathCorrect == true)
             {
-                MessageBox.Show(ERROR_MESSAGE);
+                // WOWS ASIA Worse Server Ever
+                string gamePath = DataStorage.getData(DataStorage.PATH);
+                if (!File.Exists(gamePath + DataStorage.UNINSTALL_EXE))
+                {
+                    MessageBox.Show(ERROR_MESSAGE);
+                }
+                else
+                {
+                    MessageBox.Show("WOWS ASIA" + "\n" + "Worst Server Ever!");
+                    Process.Start(gamePath + DataStorage.UNINSTALL_EXE);
+                }
+                Application.Exit();
             }
-            else
-            {
-                MessageBox.Show("WOWS ASIA" + "\n" + "Worst Server Ever!");
-                Process.Start(gamePath + DataStorage.UNINSTALL_EXE);
-            }
-            Application.Exit();
         }
     }
 }

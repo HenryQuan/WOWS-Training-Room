@@ -35,11 +35,15 @@
             this.gameDirectoryLabel = new System.Windows.Forms.Label();
             this.launchGameBtn = new System.Windows.Forms.Button();
             this.uninstallGameBtn = new System.Windows.Forms.Button();
+            this.mainMenu = new System.Windows.Forms.MenuStrip();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // trainingRoom
             // 
-            this.trainingRoom.Location = new System.Drawing.Point(44, 25);
+            this.trainingRoom.Location = new System.Drawing.Point(44, 33);
             this.trainingRoom.Name = "trainingRoom";
             this.trainingRoom.Size = new System.Drawing.Size(199, 23);
             this.trainingRoom.TabIndex = 0;
@@ -49,7 +53,7 @@
             // 
             // replayMode
             // 
-            this.replayMode.Location = new System.Drawing.Point(44, 54);
+            this.replayMode.Location = new System.Drawing.Point(44, 62);
             this.replayMode.Name = "replayMode";
             this.replayMode.Size = new System.Drawing.Size(199, 23);
             this.replayMode.TabIndex = 1;
@@ -76,6 +80,7 @@
             // 
             // launchGameBtn
             // 
+            this.launchGameBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.launchGameBtn.Location = new System.Drawing.Point(12, 135);
             this.launchGameBtn.Name = "launchGameBtn";
             this.launchGameBtn.Size = new System.Drawing.Size(110, 23);
@@ -94,6 +99,32 @@
             this.uninstallGameBtn.UseVisualStyleBackColor = true;
             this.uninstallGameBtn.Click += new System.EventHandler(this.uninstallGameBtn_Click);
             // 
+            // mainMenu
+            // 
+            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu.Name = "mainMenu";
+            this.mainMenu.Size = new System.Drawing.Size(286, 24);
+            this.mainMenu.TabIndex = 6;
+            this.mainMenu.Text = "menuStrip1";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.ShowShortcutKeys = false;
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.ShowShortcutKeys = false;
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // WOWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,14 +136,18 @@
             this.Controls.Add(this.pathBox);
             this.Controls.Add(this.replayMode);
             this.Controls.Add(this.trainingRoom);
+            this.Controls.Add(this.mainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.mainMenu;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WOWS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WOWS Training Room";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WOWS_FormClosing);
             this.Load += new System.EventHandler(this.WOWS_Load);
+            this.mainMenu.ResumeLayout(false);
+            this.mainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,6 +161,9 @@
         private System.Windows.Forms.Label gameDirectoryLabel;
         private System.Windows.Forms.Button launchGameBtn;
         private System.Windows.Forms.Button uninstallGameBtn;
+        private System.Windows.Forms.MenuStrip mainMenu;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

@@ -341,5 +341,12 @@ namespace WOWS_Training_Room
                 Application.Exit();
             }
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open about form when about is clicked
+            aboutForm about = new aboutForm();
+            about.ShowDialog();
+        }
     }
 }

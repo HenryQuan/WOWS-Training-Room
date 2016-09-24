@@ -35,9 +35,8 @@
             this.gameDirectoryLabel = new System.Windows.Forms.Label();
             this.launchGameBtn = new System.Windows.Forms.Button();
             this.uninstallGameBtn = new System.Windows.Forms.Button();
-            this.mainMenu = new System.Windows.Forms.MenuStrip();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,24 +98,6 @@
             this.uninstallGameBtn.UseVisualStyleBackColor = true;
             this.uninstallGameBtn.Click += new System.EventHandler(this.uninstallGameBtn_Click);
             // 
-            // mainMenu
-            // 
-            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.mainMenu.Location = new System.Drawing.Point(0, 0);
-            this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(286, 24);
-            this.mainMenu.TabIndex = 6;
-            this.mainMenu.Text = "menuStrip1";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.ShowShortcutKeys = false;
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -124,6 +105,16 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // mainMenu
+            // 
+            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu.Name = "mainMenu";
+            this.mainMenu.Size = new System.Drawing.Size(286, 24);
+            this.mainMenu.TabIndex = 6;
+            this.mainMenu.Text = "menuStrip1";
             // 
             // WOWS
             // 
@@ -161,9 +152,8 @@
         private System.Windows.Forms.Label gameDirectoryLabel;
         private System.Windows.Forms.Button launchGameBtn;
         private System.Windows.Forms.Button uninstallGameBtn;
-        private System.Windows.Forms.MenuStrip mainMenu;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mainMenu;
     }
 }
 

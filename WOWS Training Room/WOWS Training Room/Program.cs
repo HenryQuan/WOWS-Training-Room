@@ -15,6 +15,9 @@ namespace WOWS_Training_Room
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // Check the language wich user uses
+
+
             if (!File.Exists(WOWS.targetFile))
             {
                 // Setup for DataStorage
@@ -22,10 +25,13 @@ namespace WOWS_Training_Room
 
                 // GamePath for first launch
                 Application.Run(new gamePath());
+
+                // Then launch our main form
                 Application.Run(new WOWS());
             }
             else
             {
+                // Dont have to setup everytime
                 Application.Run(new WOWS());
             }     
         }

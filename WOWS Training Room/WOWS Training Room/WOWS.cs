@@ -74,7 +74,7 @@ namespace WOWS_Training_Room
             if (oldLaunchTime == 0)
             {
                 // During first Launch popup a message
-                MessageBox.Show(@"Welcome!");
+                MessageBox.Show(@"Welcome >_<");
             }
             else if (oldLaunchTime < 0)
             {

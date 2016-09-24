@@ -15,7 +15,8 @@ namespace WOWS_Training_Room
         {
             InitializeComponent();
 
-            someTextLabel.Text = @"If more features are needed, please download and install modpack online. This program is only an alternative way to enable some hidden features. Enjoy playing World of Warships!";
+            someTextLabel.Text = @"If more features are needed, please download and install modpack online. This program is only an alternative way to enable some hidden features."
+                    + "\n" + @"Enjoy playing World of Warships!";
         }
 
         private void HQBox_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@
             // 
             // trainingRoom
             // 
-            this.trainingRoom.Location = new System.Drawing.Point(44, 33);
+            this.trainingRoom.Location = new System.Drawing.Point(55, 33);
             this.trainingRoom.Name = "trainingRoom";
             this.trainingRoom.Size = new System.Drawing.Size(199, 23);
             this.trainingRoom.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             // replayMode
             // 
-            this.replayMode.Location = new System.Drawing.Point(44, 62);
+            this.replayMode.Location = new System.Drawing.Point(55, 62);
             this.replayMode.Name = "replayMode";
             this.replayMode.Size = new System.Drawing.Size(199, 23);
             this.replayMode.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // pathBox
             // 
-            this.pathBox.Location = new System.Drawing.Point(12, 109);
+            this.pathBox.Location = new System.Drawing.Point(23, 109);
             this.pathBox.Name = "pathBox";
             this.pathBox.Size = new System.Drawing.Size(262, 20);
             this.pathBox.TabIndex = 2;
@@ -71,7 +71,7 @@
             // gameDirectoryLabel
             // 
             this.gameDirectoryLabel.AutoSize = true;
-            this.gameDirectoryLabel.Location = new System.Drawing.Point(12, 93);
+            this.gameDirectoryLabel.Location = new System.Drawing.Point(23, 93);
             this.gameDirectoryLabel.Name = "gameDirectoryLabel";
             this.gameDirectoryLabel.Size = new System.Drawing.Size(78, 13);
             this.gameDirectoryLabel.TabIndex = 3;
@@ -80,7 +80,7 @@
             // launchGameBtn
             // 
             this.launchGameBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.launchGameBtn.Location = new System.Drawing.Point(12, 135);
+            this.launchGameBtn.Location = new System.Drawing.Point(23, 135);
             this.launchGameBtn.Name = "launchGameBtn";
             this.launchGameBtn.Size = new System.Drawing.Size(110, 23);
             this.launchGameBtn.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             // uninstallGameBtn
             // 
-            this.uninstallGameBtn.Location = new System.Drawing.Point(164, 135);
+            this.uninstallGameBtn.Location = new System.Drawing.Point(175, 135);
             this.uninstallGameBtn.Name = "uninstallGameBtn";
             this.uninstallGameBtn.Size = new System.Drawing.Size(110, 23);
             this.uninstallGameBtn.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.aboutToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(286, 24);
+            this.mainMenu.Size = new System.Drawing.Size(309, 24);
             this.mainMenu.TabIndex = 6;
             this.mainMenu.Text = "menuStrip1";
             // 
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 162);
+            this.ClientSize = new System.Drawing.Size(309, 162);
             this.Controls.Add(this.uninstallGameBtn);
             this.Controls.Add(this.launchGameBtn);
             this.Controls.Add(this.gameDirectoryLabel);

@@ -50,7 +50,7 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(80, 23);
+            this.titleLabel.Location = new System.Drawing.Point(94, 21);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(203, 24);
             this.titleLabel.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.someTextLabel.Location = new System.Drawing.Point(12, 84);
             this.someTextLabel.Name = "someTextLabel";
-            this.someTextLabel.Size = new System.Drawing.Size(262, 73);
+            this.someTextLabel.Size = new System.Drawing.Size(285, 73);
             this.someTextLabel.TabIndex = 2;
             this.someTextLabel.Text = "balala";
             this.someTextLabel.Click += new System.EventHandler(this.someTextLabel_Click);
@@ -68,7 +68,7 @@
             // versionLabel
             // 
             this.versionLabel.AutoSize = true;
-            this.versionLabel.Location = new System.Drawing.Point(145, 55);
+            this.versionLabel.Location = new System.Drawing.Point(158, 54);
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(59, 13);
             this.versionLabel.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // uninstallBtn
             // 
-            this.uninstallBtn.Location = new System.Drawing.Point(199, 127);
+            this.uninstallBtn.Location = new System.Drawing.Point(222, 127);
             this.uninstallBtn.Name = "uninstallBtn";
             this.uninstallBtn.Size = new System.Drawing.Size(75, 23);
             this.uninstallBtn.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 162);
+            this.ClientSize = new System.Drawing.Size(309, 162);
             this.Controls.Add(this.uninstallBtn);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.someTextLabel);

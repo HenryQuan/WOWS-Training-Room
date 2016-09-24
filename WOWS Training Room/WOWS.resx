@@ -303,6 +303,42 @@
   <data name="&gt;&gt;mainMenu.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="miscanellousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 20</value>
+  </data>
+  <data name="miscanellousToolStripMenuItem.Text" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="openGameDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="openGameDirectoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Game Directory</value>
+  </data>
+  <data name="wOWSStatWebsiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="wOWSStatWebsiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>WOWS Stats Website</value>
+  </data>
+  <data name="warshipsTodayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="warshipsTodayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Warships Today</value>
+  </data>
+  <data name="woWsStatsNumbersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="woWsStatsNumbersToolStripMenuItem.Text" xml:space="preserve">
+    <value>WoWs Numbers</value>
+  </data>
+  <data name="officialSiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="officialSiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Official Site</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -612,6 +648,42 @@
     <value>aboutToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miscanellousToolStripMenuItem.Name" xml:space="preserve">
+    <value>miscanellousToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;miscanellousToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openGameDirectoryToolStripMenuItem.Name" xml:space="preserve">
+    <value>openGameDirectoryToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openGameDirectoryToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wOWSStatWebsiteToolStripMenuItem.Name" xml:space="preserve">
+    <value>wOWSStatWebsiteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;wOWSStatWebsiteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;warshipsTodayToolStripMenuItem.Name" xml:space="preserve">
+    <value>warshipsTodayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;warshipsTodayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;woWsStatsNumbersToolStripMenuItem.Name" xml:space="preserve">
+    <value>woWsStatsNumbersToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;woWsStatsNumbersToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;officialSiteToolStripMenuItem.Name" xml:space="preserve">
+    <value>officialSiteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;officialSiteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

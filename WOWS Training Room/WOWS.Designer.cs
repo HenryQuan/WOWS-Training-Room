@@ -37,6 +37,12 @@
             this.uninstallGameBtn = new System.Windows.Forms.Button();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu = new System.Windows.Forms.MenuStrip();
+            this.miscanellousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openGameDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wOWSStatWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.warshipsTodayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.woWsStatsNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.officialSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,9 +94,51 @@
             // mainMenu
             // 
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miscanellousToolStripMenuItem,
             this.aboutToolStripMenuItem});
             resources.ApplyResources(this.mainMenu, "mainMenu");
             this.mainMenu.Name = "mainMenu";
+            // 
+            // miscanellousToolStripMenuItem
+            // 
+            this.miscanellousToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openGameDirectoryToolStripMenuItem,
+            this.officialSiteToolStripMenuItem,
+            this.wOWSStatWebsiteToolStripMenuItem});
+            this.miscanellousToolStripMenuItem.Name = "miscanellousToolStripMenuItem";
+            resources.ApplyResources(this.miscanellousToolStripMenuItem, "miscanellousToolStripMenuItem");
+            // 
+            // openGameDirectoryToolStripMenuItem
+            // 
+            this.openGameDirectoryToolStripMenuItem.Name = "openGameDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.openGameDirectoryToolStripMenuItem, "openGameDirectoryToolStripMenuItem");
+            this.openGameDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openGameDirectoryToolStripMenuItem_Click);
+            // 
+            // wOWSStatWebsiteToolStripMenuItem
+            // 
+            this.wOWSStatWebsiteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.warshipsTodayToolStripMenuItem,
+            this.woWsStatsNumbersToolStripMenuItem});
+            this.wOWSStatWebsiteToolStripMenuItem.Name = "wOWSStatWebsiteToolStripMenuItem";
+            resources.ApplyResources(this.wOWSStatWebsiteToolStripMenuItem, "wOWSStatWebsiteToolStripMenuItem");
+            // 
+            // warshipsTodayToolStripMenuItem
+            // 
+            this.warshipsTodayToolStripMenuItem.Name = "warshipsTodayToolStripMenuItem";
+            resources.ApplyResources(this.warshipsTodayToolStripMenuItem, "warshipsTodayToolStripMenuItem");
+            this.warshipsTodayToolStripMenuItem.Click += new System.EventHandler(this.warshipsTodayToolStripMenuItem_Click);
+            // 
+            // woWsStatsNumbersToolStripMenuItem
+            // 
+            this.woWsStatsNumbersToolStripMenuItem.Name = "woWsStatsNumbersToolStripMenuItem";
+            resources.ApplyResources(this.woWsStatsNumbersToolStripMenuItem, "woWsStatsNumbersToolStripMenuItem");
+            this.woWsStatsNumbersToolStripMenuItem.Click += new System.EventHandler(this.woWsStatsNumbersToolStripMenuItem_Click);
+            // 
+            // officialSiteToolStripMenuItem
+            // 
+            this.officialSiteToolStripMenuItem.Name = "officialSiteToolStripMenuItem";
+            resources.ApplyResources(this.officialSiteToolStripMenuItem, "officialSiteToolStripMenuItem");
+            this.officialSiteToolStripMenuItem.Click += new System.EventHandler(this.officialSiteToolStripMenuItem_Click);
             // 
             // WOWS
             // 
@@ -125,6 +173,12 @@
         private System.Windows.Forms.Button uninstallGameBtn;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip mainMenu;
+        private System.Windows.Forms.ToolStripMenuItem miscanellousToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openGameDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wOWSStatWebsiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem warshipsTodayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem woWsStatsNumbersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem officialSiteToolStripMenuItem;
     }
 }
 

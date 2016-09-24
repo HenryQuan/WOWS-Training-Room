@@ -54,9 +54,9 @@
             // 
             // gamePath
             // 
+            this.AcceptButton = this.checkPathBtn;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.checkPathBtn;
             this.ControlBox = false;
             this.Controls.Add(this.someLabel);
             this.Controls.Add(this.checkPathBtn);

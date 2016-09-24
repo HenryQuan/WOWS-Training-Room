@@ -30,6 +30,9 @@ namespace WOWS_Training_Room
         public static string targetFile = targetPath + @"\data.txt";
 
         const string ERROR_MESSAGE = @"Error! Please enter the correct path.";
+        const string WOWS_WEBSITE = @"http://worldofwarships.com/";
+        const string WOWS_NUMEBR = @"http://wows-numbers.com/";
+        const string WOWS_TODAY = @"https://warships.today/";
 
         public WOWS()
         {
@@ -347,6 +350,30 @@ namespace WOWS_Training_Room
             // Open about form when about is clicked
             aboutForm about = new aboutForm();
             about.ShowDialog();
+        }
+
+        private void openGameDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open game directory
+            Process.Start(DataStorage.getData(DataStorage.PATH));
+        }
+
+        private void officialSiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open official site
+            Process.Start(WOWS_WEBSITE);
+        }
+
+        private void warshipsTodayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // WOWS Today
+            Process.Start(WOWS_TODAY);
+        }
+
+        private void woWsStatsNumbersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // WOWS stats
+            Process.Start(WOWS_NUMEBR);
         }
     }
 }

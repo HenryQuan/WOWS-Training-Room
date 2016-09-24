@@ -70,9 +70,9 @@ namespace WOWS_Training_Room
                 DeleteDirectory(WOWS.targetPath);
             }
 
-            // Run a cmd and have 2.5 second delay to delete itself
+            // Run a cmd and have 3.456 second delay to delete itself
             var programPath = Process.GetCurrentProcess().MainModule.FileName;
-            var info = new ProcessStartInfo("cmd.exe", "/C ping 1.1.1.1 -n 1 -w 2500 > Nul & Del \"" + programPath + "\"");
+            var info = new ProcessStartInfo("cmd.exe", "/C ping 1.1.1.1 -n 1 -w 3456 > Nul & Del \"" + programPath + "\"");
             // The windows is hidden by the way.
             info.WindowStyle = ProcessWindowStyle.Hidden;
             Process.Start(info).Dispose();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gamePath));
             this.gamepathBox = new System.Windows.Forms.TextBox();
             this.checkPathBtn = new System.Windows.Forms.Button();
             this.someLabel = new System.Windows.Forms.Label();
@@ -35,44 +36,33 @@
             // 
             // gamepathBox
             // 
-            this.gamepathBox.Location = new System.Drawing.Point(18, 36);
+            resources.ApplyResources(this.gamepathBox, "gamepathBox");
             this.gamepathBox.Name = "gamepathBox";
-            this.gamepathBox.Size = new System.Drawing.Size(264, 20);
-            this.gamepathBox.TabIndex = 0;
             // 
             // checkPathBtn
             // 
             this.checkPathBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.checkPathBtn.Location = new System.Drawing.Point(113, 65);
+            resources.ApplyResources(this.checkPathBtn, "checkPathBtn");
             this.checkPathBtn.Name = "checkPathBtn";
-            this.checkPathBtn.Size = new System.Drawing.Size(75, 23);
-            this.checkPathBtn.TabIndex = 1;
-            this.checkPathBtn.Text = "Check";
             this.checkPathBtn.UseVisualStyleBackColor = true;
             this.checkPathBtn.Click += new System.EventHandler(this.checkPathBtn_Click);
             // 
             // someLabel
             // 
-            this.someLabel.AutoSize = true;
-            this.someLabel.Location = new System.Drawing.Point(31, 19);
+            resources.ApplyResources(this.someLabel, "someLabel");
             this.someLabel.Name = "someLabel";
-            this.someLabel.Size = new System.Drawing.Size(238, 13);
-            this.someLabel.TabIndex = 2;
-            this.someLabel.Text = "Please paste your game path in the texbox below";
             // 
             // gamePath
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.checkPathBtn;
-            this.ClientSize = new System.Drawing.Size(300, 98);
             this.ControlBox = false;
             this.Controls.Add(this.someLabel);
             this.Controls.Add(this.checkPathBtn);
             this.Controls.Add(this.gamepathBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "gamePath";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

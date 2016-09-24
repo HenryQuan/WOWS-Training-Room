@@ -74,7 +74,7 @@ namespace WOWS_Training_Room
             if (oldLaunchTime == 0)
             {
                 // During first Launch popup a message
-                MessageBox.Show(@"This is the first launch of this program" + "\n" + @"Please paste your game path into the textbox below.");
+                MessageBox.Show(@"Welcome!");
             }
             else if (oldLaunchTime < 0)
             {

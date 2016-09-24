@@ -42,85 +42,60 @@
             // 
             // trainingRoom
             // 
-            this.trainingRoom.Location = new System.Drawing.Point(55, 33);
+            resources.ApplyResources(this.trainingRoom, "trainingRoom");
             this.trainingRoom.Name = "trainingRoom";
-            this.trainingRoom.Size = new System.Drawing.Size(199, 23);
-            this.trainingRoom.TabIndex = 0;
-            this.trainingRoom.Text = "Enable Training Room";
             this.trainingRoom.UseVisualStyleBackColor = true;
             this.trainingRoom.Click += new System.EventHandler(this.trainingRoom_Click);
             // 
             // replayMode
             // 
-            this.replayMode.Location = new System.Drawing.Point(55, 62);
+            resources.ApplyResources(this.replayMode, "replayMode");
             this.replayMode.Name = "replayMode";
-            this.replayMode.Size = new System.Drawing.Size(199, 23);
-            this.replayMode.TabIndex = 1;
-            this.replayMode.Text = "Enable Replay Mode";
             this.replayMode.UseVisualStyleBackColor = true;
             this.replayMode.Click += new System.EventHandler(this.replayMode_Click);
             // 
             // pathBox
             // 
-            this.pathBox.Location = new System.Drawing.Point(23, 109);
+            resources.ApplyResources(this.pathBox, "pathBox");
             this.pathBox.Name = "pathBox";
-            this.pathBox.Size = new System.Drawing.Size(262, 20);
-            this.pathBox.TabIndex = 2;
-            this.pathBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gameDirectoryLabel
             // 
-            this.gameDirectoryLabel.AutoSize = true;
-            this.gameDirectoryLabel.Location = new System.Drawing.Point(23, 93);
+            resources.ApplyResources(this.gameDirectoryLabel, "gameDirectoryLabel");
             this.gameDirectoryLabel.Name = "gameDirectoryLabel";
-            this.gameDirectoryLabel.Size = new System.Drawing.Size(78, 13);
-            this.gameDirectoryLabel.TabIndex = 3;
-            this.gameDirectoryLabel.Text = "Game directory";
             // 
             // launchGameBtn
             // 
             this.launchGameBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.launchGameBtn.Location = new System.Drawing.Point(23, 135);
+            resources.ApplyResources(this.launchGameBtn, "launchGameBtn");
             this.launchGameBtn.Name = "launchGameBtn";
-            this.launchGameBtn.Size = new System.Drawing.Size(110, 23);
-            this.launchGameBtn.TabIndex = 4;
-            this.launchGameBtn.Text = "Launch Game";
             this.launchGameBtn.UseVisualStyleBackColor = true;
             this.launchGameBtn.Click += new System.EventHandler(this.launchGameBtn_Click);
             // 
             // uninstallGameBtn
             // 
-            this.uninstallGameBtn.Location = new System.Drawing.Point(175, 135);
+            resources.ApplyResources(this.uninstallGameBtn, "uninstallGameBtn");
             this.uninstallGameBtn.Name = "uninstallGameBtn";
-            this.uninstallGameBtn.Size = new System.Drawing.Size(110, 23);
-            this.uninstallGameBtn.TabIndex = 5;
-            this.uninstallGameBtn.Text = "Uninstall Game";
             this.uninstallGameBtn.UseVisualStyleBackColor = true;
             this.uninstallGameBtn.Click += new System.EventHandler(this.uninstallGameBtn_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.ShowShortcutKeys = false;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // mainMenu
             // 
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
-            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.mainMenu, "mainMenu");
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(309, 24);
-            this.mainMenu.TabIndex = 6;
-            this.mainMenu.Text = "menuStrip1";
             // 
             // WOWS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 162);
             this.Controls.Add(this.uninstallGameBtn);
             this.Controls.Add(this.launchGameBtn);
             this.Controls.Add(this.gameDirectoryLabel);
@@ -129,12 +104,8 @@
             this.Controls.Add(this.trainingRoom);
             this.Controls.Add(this.mainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenu;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WOWS";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WOWS Training Room";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WOWS_FormClosing);
             this.Load += new System.EventHandler(this.WOWS_Load);
             this.mainMenu.ResumeLayout(false);

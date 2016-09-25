@@ -400,35 +400,54 @@ namespace WOWS_Training_Room
         {
             // Get the path
             string replayPath = DataStorage.getData(DataStorage.PATH) + REPLAYS;
+            string processName = @"WorldOfWarships";
 
             if (Directory.Exists(replayPath))
             {
-                // Kindly remind user to close game. Otherwise, it won't work
-                if (DataStorage.getData(DataStorage.LAUNCH) == @"1")
+                // If the game is running the do nothing
+                if(!IsProcessOpen(processName))
                 {
-                    MessageBox.Show(@"Please close the game before watching your last battle.", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                DateTime lastHigh = new DateTime(1900, 1, 1);
-                string highDir = @"";
-                foreach (string subdir in Directory.GetFiles(replayPath))
-                {
-                    DirectoryInfo fi1 = new DirectoryInfo(subdir);
-                    DateTime created = fi1.LastWriteTime;
-
-                    if (!subdir.Contains(TEMP_GAME) && subdir.Contains(EXTENSION_NAME) && created > lastHigh)
+                    DateTime lastHigh = new DateTime(1900, 1, 1);
+                    string highDir = @"";
+                    foreach (string subdir in Directory.GetFiles(replayPath))
                     {
-                        highDir = subdir;
-                        lastHigh = created;
+                        DirectoryInfo fi1 = new DirectoryInfo(subdir);
+                        DateTime created = fi1.LastWriteTime;
+
+                        if (!subdir.Contains(TEMP_GAME) && subdir.Contains(EXTENSION_NAME) && created > lastHigh)
+                        {
+                            highDir = subdir;
+                            lastHigh = created;
+                        }
                     }
+                    Console.WriteLine(highDir);
+                    Process.Start(highDir, replayPath + WOWS_GAME);
                 }
-                Console.WriteLine(highDir);
-                Process.Start(highDir, replayPath + WOWS_GAME);
+                else
+                {
+                    MessageBox.Show(@"Please close the game first before watching your last battle.");
+                }
             }
             else
             {
                 MessageBox.Show(@"Please enable replay mode first");
             }
         }
+
+        private bool IsProcessOpen(string name)
+        {
+            bool isOpen = false;
+            foreach (Process clsProcess in Process.GetProcesses())
+            {
+                Console.WriteLine(clsProcess.ProcessName);
+                if (clsProcess.ProcessName.Contains(name))
+                {
+                    isOpen = true;
+                }
+            }
+
+            return isOpen;
+        }
+
     }
 }

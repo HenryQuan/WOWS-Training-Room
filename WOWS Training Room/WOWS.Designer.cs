@@ -39,10 +39,12 @@
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.miscanellousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.officialSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wOWSStatWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warshipsTodayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.woWsStatsNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.officialSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openReplayFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.watchLastReplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +105,8 @@
             // 
             this.miscanellousToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openGameDirectoryToolStripMenuItem,
+            this.openReplayFolderToolStripMenuItem,
+            this.watchLastReplayToolStripMenuItem,
             this.officialSiteToolStripMenuItem,
             this.wOWSStatWebsiteToolStripMenuItem});
             this.miscanellousToolStripMenuItem.Name = "miscanellousToolStripMenuItem";
@@ -113,6 +117,12 @@
             this.openGameDirectoryToolStripMenuItem.Name = "openGameDirectoryToolStripMenuItem";
             resources.ApplyResources(this.openGameDirectoryToolStripMenuItem, "openGameDirectoryToolStripMenuItem");
             this.openGameDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openGameDirectoryToolStripMenuItem_Click);
+            // 
+            // officialSiteToolStripMenuItem
+            // 
+            this.officialSiteToolStripMenuItem.Name = "officialSiteToolStripMenuItem";
+            resources.ApplyResources(this.officialSiteToolStripMenuItem, "officialSiteToolStripMenuItem");
+            this.officialSiteToolStripMenuItem.Click += new System.EventHandler(this.officialSiteToolStripMenuItem_Click);
             // 
             // wOWSStatWebsiteToolStripMenuItem
             // 
@@ -134,11 +144,17 @@
             resources.ApplyResources(this.woWsStatsNumbersToolStripMenuItem, "woWsStatsNumbersToolStripMenuItem");
             this.woWsStatsNumbersToolStripMenuItem.Click += new System.EventHandler(this.woWsStatsNumbersToolStripMenuItem_Click);
             // 
-            // officialSiteToolStripMenuItem
+            // openReplayFolderToolStripMenuItem
             // 
-            this.officialSiteToolStripMenuItem.Name = "officialSiteToolStripMenuItem";
-            resources.ApplyResources(this.officialSiteToolStripMenuItem, "officialSiteToolStripMenuItem");
-            this.officialSiteToolStripMenuItem.Click += new System.EventHandler(this.officialSiteToolStripMenuItem_Click);
+            this.openReplayFolderToolStripMenuItem.Name = "openReplayFolderToolStripMenuItem";
+            resources.ApplyResources(this.openReplayFolderToolStripMenuItem, "openReplayFolderToolStripMenuItem");
+            this.openReplayFolderToolStripMenuItem.Click += new System.EventHandler(this.openReplayFolderToolStripMenuItem_Click);
+            // 
+            // watchLastReplayToolStripMenuItem
+            // 
+            this.watchLastReplayToolStripMenuItem.Name = "watchLastReplayToolStripMenuItem";
+            resources.ApplyResources(this.watchLastReplayToolStripMenuItem, "watchLastReplayToolStripMenuItem");
+            this.watchLastReplayToolStripMenuItem.Click += new System.EventHandler(this.watchLastReplayToolStripMenuItem_Click);
             // 
             // WOWS
             // 
@@ -179,6 +195,8 @@
         private System.Windows.Forms.ToolStripMenuItem warshipsTodayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem woWsStatsNumbersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem officialSiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openReplayFolderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem watchLastReplayToolStripMenuItem;
     }
 }
 

@@ -126,7 +126,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="trainingRoom.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="trainingRoom.Text" xml:space="preserve">
     <value>Enable Training Room</value>
@@ -150,7 +150,7 @@
     <value>199, 23</value>
   </data>
   <data name="replayMode.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="replayMode.Text" xml:space="preserve">
     <value>Enable Replay Mode</value>
@@ -174,7 +174,7 @@
     <value>262, 20</value>
   </data>
   <data name="pathBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pathBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
@@ -226,7 +226,7 @@
     <value>110, 23</value>
   </data>
   <data name="launchGameBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="launchGameBtn.Text" xml:space="preserve">
     <value>Launch Game</value>
@@ -279,6 +279,42 @@
   <metadata name="mainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 13</value>
   </metadata>
+  <data name="openGameDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="openGameDirectoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Game Directory</value>
+  </data>
+  <data name="openReplayFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="openReplayFolderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Replay Folder</value>
+  </data>
+  <data name="watchLastReplayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="watchLastReplayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Watch Last Battle</value>
+  </data>
+  <data name="officialSiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="officialSiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Official Site</value>
+  </data>
+  <data name="wOWSStatWebsiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="wOWSStatWebsiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>WOWS Stats Website</value>
+  </data>
+  <data name="miscanellousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 20</value>
+  </data>
+  <data name="miscanellousToolStripMenuItem.Text" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
   <data name="mainMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -303,24 +339,6 @@
   <data name="&gt;&gt;mainMenu.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="miscanellousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 20</value>
-  </data>
-  <data name="miscanellousToolStripMenuItem.Text" xml:space="preserve">
-    <value>Miscellaneous</value>
-  </data>
-  <data name="openGameDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="openGameDirectoryToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Game Directory</value>
-  </data>
-  <data name="wOWSStatWebsiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="wOWSStatWebsiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>WOWS Stats Website</value>
-  </data>
   <data name="warshipsTodayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 22</value>
   </data>
@@ -332,12 +350,6 @@
   </data>
   <data name="woWsStatsNumbersToolStripMenuItem.Text" xml:space="preserve">
     <value>WoWs Numbers</value>
-  </data>
-  <data name="officialSiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="officialSiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Official Site</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -662,6 +674,12 @@
   <data name="&gt;&gt;openGameDirectoryToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;officialSiteToolStripMenuItem.Name" xml:space="preserve">
+    <value>officialSiteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;officialSiteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;wOWSStatWebsiteToolStripMenuItem.Name" xml:space="preserve">
     <value>wOWSStatWebsiteToolStripMenuItem</value>
   </data>
@@ -680,10 +698,16 @@
   <data name="&gt;&gt;woWsStatsNumbersToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;officialSiteToolStripMenuItem.Name" xml:space="preserve">
-    <value>officialSiteToolStripMenuItem</value>
+  <data name="&gt;&gt;openReplayFolderToolStripMenuItem.Name" xml:space="preserve">
+    <value>openReplayFolderToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;officialSiteToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;openReplayFolderToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;watchLastReplayToolStripMenuItem.Name" xml:space="preserve">
+    <value>watchLastReplayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;watchLastReplayToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

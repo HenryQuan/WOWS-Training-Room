@@ -34,6 +34,11 @@ namespace WOWS_Training_Room
         const string WOWS_NUMEBR = @"http://wows-numbers.com/";
         const string WOWS_TODAY = @"https://warships.today/";
 
+        const string REPLAYS = @"/replays";
+        const string WOWS_GAME = @"/WorldOfWarships.exe";
+        const string TEMP_GAME = @"temp.wowsreplay";
+        const string EXTENSION_NAME = @"wowsreplay";
+
         public WOWS()
         {
             InitializeComponent();
@@ -374,6 +379,56 @@ namespace WOWS_Training_Room
         {
             // WOWS stats
             Process.Start(WOWS_NUMEBR);
+        }
+
+        private void openReplayFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open replay directory if there is one
+            string replayPath = DataStorage.getData(DataStorage.PATH);
+
+            if (Directory.Exists(replayPath))
+            {
+                Process.Start(replayPath + REPLAYS);
+            }
+            else
+            {
+                MessageBox.Show(@"Please enable replay mode first");
+            }
+        }
+
+        private void watchLastReplayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Get the path
+            string replayPath = DataStorage.getData(DataStorage.PATH) + REPLAYS;
+
+            if (Directory.Exists(replayPath))
+            {
+                // Kindly remind user to close game. Otherwise, it won't work
+                if (DataStorage.getData(DataStorage.LAUNCH) == @"1")
+                {
+                    MessageBox.Show(@"Please close the game before watching your last battle.", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                DateTime lastHigh = new DateTime(1900, 1, 1);
+                string highDir = @"";
+                foreach (string subdir in Directory.GetFiles(replayPath))
+                {
+                    DirectoryInfo fi1 = new DirectoryInfo(subdir);
+                    DateTime created = fi1.LastWriteTime;
+
+                    if (!subdir.Contains(TEMP_GAME) && subdir.Contains(EXTENSION_NAME) && created > lastHigh)
+                    {
+                        highDir = subdir;
+                        lastHigh = created;
+                    }
+                }
+                Console.WriteLine(highDir);
+                Process.Start(highDir, replayPath + WOWS_GAME);
+            }
+            else
+            {
+                MessageBox.Show(@"Please enable replay mode first");
+            }
         }
     }
 }

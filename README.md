@@ -4,7 +4,7 @@
 
 2, Enable *Replay* feature. It records every battle you played inside a replays folder.
 
-3, More features are coming soon *or not*.
+3, Watching last battle and some other useful features.
 
 *Please note that Training Battle and Replay feature are just hidden features from the game.
 

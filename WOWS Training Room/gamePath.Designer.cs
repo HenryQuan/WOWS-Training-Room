@@ -30,23 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gamePath));
             this.gamepathBox = new System.Windows.Forms.TextBox();
-            this.checkPathBtn = new System.Windows.Forms.Button();
             this.someLabel = new System.Windows.Forms.Label();
             this.loadPathBtn = new System.Windows.Forms.Button();
+            this.checkPathBtn = new System.Windows.Forms.Button();
+            this.mainFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.mainFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gamepathBox
             // 
             resources.ApplyResources(this.gamepathBox, "gamepathBox");
             this.gamepathBox.Name = "gamepathBox";
-            // 
-            // checkPathBtn
-            // 
-            this.checkPathBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.checkPathBtn, "checkPathBtn");
-            this.checkPathBtn.Name = "checkPathBtn";
-            this.checkPathBtn.UseVisualStyleBackColor = true;
-            this.checkPathBtn.Click += new System.EventHandler(this.checkPathBtn_Click);
             // 
             // someLabel
             // 
@@ -60,18 +54,33 @@
             this.loadPathBtn.UseVisualStyleBackColor = true;
             this.loadPathBtn.Click += new System.EventHandler(this.loadPathBtn_Click);
             // 
+            // checkPathBtn
+            // 
+            this.checkPathBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.checkPathBtn, "checkPathBtn");
+            this.checkPathBtn.Name = "checkPathBtn";
+            this.checkPathBtn.UseVisualStyleBackColor = true;
+            this.checkPathBtn.Click += new System.EventHandler(this.checkPathBtn_Click);
+            // 
+            // mainFlowLayoutPanel
+            // 
+            resources.ApplyResources(this.mainFlowLayoutPanel, "mainFlowLayoutPanel");
+            this.mainFlowLayoutPanel.Controls.Add(this.someLabel);
+            this.mainFlowLayoutPanel.Name = "mainFlowLayoutPanel";
+            // 
             // gamePath
             // 
             this.AcceptButton = this.checkPathBtn;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
+            this.Controls.Add(this.mainFlowLayoutPanel);
             this.Controls.Add(this.loadPathBtn);
-            this.Controls.Add(this.someLabel);
             this.Controls.Add(this.checkPathBtn);
             this.Controls.Add(this.gamepathBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "gamePath";
+            this.mainFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,8 +89,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox gamepathBox;
-        private System.Windows.Forms.Button checkPathBtn;
         private System.Windows.Forms.Label someLabel;
         private System.Windows.Forms.Button loadPathBtn;
+        private System.Windows.Forms.Button checkPathBtn;
+        private System.Windows.Forms.FlowLayoutPanel mainFlowLayoutPanel;
     }
 }

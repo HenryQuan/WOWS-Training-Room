@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="gamepathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 38</value>
+    <value>14, 31</value>
   </data>
   <data name="gamepathBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 20</value>
@@ -140,8 +140,69 @@
   <data name="&gt;&gt;gamepathBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="someLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="someLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="someLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 25</value>
+  </data>
+  <data name="someLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="someLabel.Text" xml:space="preserve">
+    <value>Please paste your game path in the texbox below</value>
+  </data>
+  <data name="someLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;someLabel.Name" xml:space="preserve">
+    <value>someLabel</value>
+  </data>
+  <data name="&gt;&gt;someLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;someLabel.Parent" xml:space="preserve">
+    <value>mainFlowLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;someLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="loadPathBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="loadPathBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 30</value>
+  </data>
+  <data name="loadPathBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="loadPathBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="loadPathBtn.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;loadPathBtn.Name" xml:space="preserve">
+    <value>loadPathBtn</value>
+  </data>
+  <data name="&gt;&gt;loadPathBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;loadPathBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;loadPathBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkPathBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="checkPathBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 65</value>
+    <value>124, 58</value>
   </data>
   <data name="checkPathBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -164,55 +225,31 @@
   <data name="&gt;&gt;checkPathBtn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="someLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="mainFlowLayoutPanel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="someLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 19</value>
+  <data name="mainFlowLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="someLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 13</value>
+  <data name="mainFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="someLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="mainFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>323, 25</value>
   </data>
-  <data name="someLabel.Text" xml:space="preserve">
-    <value>Please paste your game path in the texbox below</value>
+  <data name="mainFlowLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;someLabel.Name" xml:space="preserve">
-    <value>someLabel</value>
+  <data name="&gt;&gt;mainFlowLayoutPanel.Name" xml:space="preserve">
+    <value>mainFlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;someLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;mainFlowLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;someLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;mainFlowLayoutPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;someLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="loadPathBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 38</value>
-  </data>
-  <data name="loadPathBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="loadPathBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="loadPathBtn.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="&gt;&gt;loadPathBtn.Name" xml:space="preserve">
-    <value>loadPathBtn</value>
-  </data>
-  <data name="&gt;&gt;loadPathBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;loadPathBtn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;loadPathBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;mainFlowLayoutPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -222,9 +259,11 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>323, 98</value>
+    <value>323, 88</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

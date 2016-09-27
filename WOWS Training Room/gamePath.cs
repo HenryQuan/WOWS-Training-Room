@@ -37,5 +37,14 @@ namespace WOWS_Training_Room
                 this.gamepathBox.Text = gamePathLoader.SelectedPath;
             }
         }
+
+        private void gamePath_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Close this program if user does not want to use it
+            if (!DataStorage.isGamePathLegal(gamepathBox.Text))
+            {
+                Application.ExitThread();
+            }
+        }
     }
 }

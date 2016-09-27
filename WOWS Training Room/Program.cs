@@ -17,8 +17,8 @@ namespace WOWS_Training_Room
 
             // Check the language wich user uses
 
-
-            if (!File.Exists(WOWS.targetFile))
+            // Check if the path is being Created
+            if (!File.Exists(WOWS.targetFile) || DataStorage.getData(DataStorage.PATH) == @"")
             {
                 // Setup for DataStorage
                 WOWS.setup();

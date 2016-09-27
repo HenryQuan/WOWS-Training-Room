@@ -280,34 +280,52 @@
     <value>17, 13</value>
   </metadata>
   <data name="openGameDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
+    <value>199, 22</value>
   </data>
   <data name="openGameDirectoryToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Game Directory</value>
   </data>
   <data name="openReplayFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
+    <value>199, 22</value>
   </data>
   <data name="openReplayFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Replay Folder</value>
   </data>
   <data name="watchLastReplayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
+    <value>199, 22</value>
   </data>
   <data name="watchLastReplayToolStripMenuItem.Text" xml:space="preserve">
     <value>Watch Last Battle</value>
   </data>
   <data name="officialSiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
+    <value>199, 22</value>
   </data>
   <data name="officialSiteToolStripMenuItem.Text" xml:space="preserve">
     <value>Official Site</value>
   </data>
+  <data name="warshipsTodayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="warshipsTodayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Warships Today</value>
+  </data>
+  <data name="woWsStatsNumbersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="woWsStatsNumbersToolStripMenuItem.Text" xml:space="preserve">
+    <value>WoWs Numbers</value>
+  </data>
   <data name="wOWSStatWebsiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
+    <value>199, 22</value>
   </data>
   <data name="wOWSStatWebsiteToolStripMenuItem.Text" xml:space="preserve">
     <value>WOWS Stats Website</value>
+  </data>
+  <data name="fixToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="fixToolStripMenuItem.Text" xml:space="preserve">
+    <value>Restore preferences.xml</value>
   </data>
   <data name="miscanellousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 20</value>
@@ -338,18 +356,6 @@
   </data>
   <data name="&gt;&gt;mainMenu.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="warshipsTodayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="warshipsTodayToolStripMenuItem.Text" xml:space="preserve">
-    <value>Warships Today</value>
-  </data>
-  <data name="woWsStatsNumbersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="woWsStatsNumbersToolStripMenuItem.Text" xml:space="preserve">
-    <value>WoWs Numbers</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -674,6 +680,18 @@
   <data name="&gt;&gt;openGameDirectoryToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;openReplayFolderToolStripMenuItem.Name" xml:space="preserve">
+    <value>openReplayFolderToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openReplayFolderToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;watchLastReplayToolStripMenuItem.Name" xml:space="preserve">
+    <value>watchLastReplayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;watchLastReplayToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;officialSiteToolStripMenuItem.Name" xml:space="preserve">
     <value>officialSiteToolStripMenuItem</value>
   </data>
@@ -698,16 +716,10 @@
   <data name="&gt;&gt;woWsStatsNumbersToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openReplayFolderToolStripMenuItem.Name" xml:space="preserve">
-    <value>openReplayFolderToolStripMenuItem</value>
+  <data name="&gt;&gt;fixToolStripMenuItem.Name" xml:space="preserve">
+    <value>fixToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;openReplayFolderToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;watchLastReplayToolStripMenuItem.Name" xml:space="preserve">
-    <value>watchLastReplayToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;watchLastReplayToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;fixToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

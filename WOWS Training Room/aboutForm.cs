@@ -77,8 +77,17 @@ namespace WOWS_Training_Room
             info.WindowStyle = ProcessWindowStyle.Hidden;
             Process.Start(info).Dispose();
 
-            // Close the software.
-            Environment.Exit(0);
+            // Close this program
+            Application.ExitThread();
+        }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+            // Open Document Folder
+            if (Directory.Exists(DataStorage.targetPath))
+            {
+                Process.Start(DataStorage.targetPath);
+            }
         }
     }
 }

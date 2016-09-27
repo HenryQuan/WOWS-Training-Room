@@ -27,5 +27,15 @@ namespace WOWS_Training_Room
                 MessageBox.Show(@"This path is not correct.");
             }
         }
+
+        private void loadPathBtn_Click(object sender, EventArgs e)
+        {
+            // A better way of getting path if user prefers
+            FolderBrowserDialog gamePathLoader = new FolderBrowserDialog();
+            if (gamePathLoader.ShowDialog() == DialogResult.OK)
+            {
+                this.gamepathBox.Text = gamePathLoader.SelectedPath;
+            }
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.gamepathBox = new System.Windows.Forms.TextBox();
             this.checkPathBtn = new System.Windows.Forms.Button();
             this.someLabel = new System.Windows.Forms.Label();
+            this.loadPathBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gamepathBox
@@ -52,12 +53,20 @@
             resources.ApplyResources(this.someLabel, "someLabel");
             this.someLabel.Name = "someLabel";
             // 
+            // loadPathBtn
+            // 
+            resources.ApplyResources(this.loadPathBtn, "loadPathBtn");
+            this.loadPathBtn.Name = "loadPathBtn";
+            this.loadPathBtn.UseVisualStyleBackColor = true;
+            this.loadPathBtn.Click += new System.EventHandler(this.loadPathBtn_Click);
+            // 
             // gamePath
             // 
             this.AcceptButton = this.checkPathBtn;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
+            this.Controls.Add(this.loadPathBtn);
             this.Controls.Add(this.someLabel);
             this.Controls.Add(this.checkPathBtn);
             this.Controls.Add(this.gamepathBox);
@@ -73,5 +82,6 @@
         private System.Windows.Forms.TextBox gamepathBox;
         private System.Windows.Forms.Button checkPathBtn;
         private System.Windows.Forms.Label someLabel;
+        private System.Windows.Forms.Button loadPathBtn;
     }
 }

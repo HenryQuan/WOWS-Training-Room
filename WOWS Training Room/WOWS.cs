@@ -422,6 +422,9 @@ namespace WOWS_Training_Room
                     }
                     Console.WriteLine(highDir);
                     Process.Start(highDir, replayPath + WOWS_GAME);
+
+                    // Close this program
+                    Application.ExitThread();
                 }
                 else
                 {
@@ -437,6 +440,7 @@ namespace WOWS_Training_Room
         private bool IsProcessOpen(string name)
         {
             bool isOpen = false;
+            // Check if game is running
             foreach (Process clsProcess in Process.GetProcesses())
             {
                 Console.WriteLine(clsProcess.ProcessName);
@@ -449,5 +453,31 @@ namespace WOWS_Training_Room
             return isOpen;
         }
 
+        private void fixToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var reply = MessageBox.Show(@"Are you sure to use this function?" + "\n" + @"Please only use this if you found your game having strange behavior." , 
+                @"Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (reply == DialogResult.Yes)
+            {
+                string preferences = DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML;
+                string backup = targetPath + DataStorage.PREFER_XML;
+
+                // Check if there is a preferences.xml
+                if (File.Exists(preferences) && File.Exists(backup))
+                {
+                    // Remove it and copy back the backup copy
+                    File.Delete(preferences);
+                    File.Copy(backup, preferences);
+
+                    // Restart this program
+                    Application.Restart();
+                }
+                else
+                {
+                    // Usually, there is a preferences.xml
+                    MessageBox.Show(@"There is no backup file.");
+                }
+            }
+        }
     }
 }

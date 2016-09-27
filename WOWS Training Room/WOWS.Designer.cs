@@ -39,12 +39,13 @@
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.miscanellousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openReplayFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.watchLastReplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.officialSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wOWSStatWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warshipsTodayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.woWsStatsNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openReplayFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.watchLastReplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,7 +109,8 @@
             this.openReplayFolderToolStripMenuItem,
             this.watchLastReplayToolStripMenuItem,
             this.officialSiteToolStripMenuItem,
-            this.wOWSStatWebsiteToolStripMenuItem});
+            this.wOWSStatWebsiteToolStripMenuItem,
+            this.fixToolStripMenuItem});
             this.miscanellousToolStripMenuItem.Name = "miscanellousToolStripMenuItem";
             resources.ApplyResources(this.miscanellousToolStripMenuItem, "miscanellousToolStripMenuItem");
             // 
@@ -117,6 +119,18 @@
             this.openGameDirectoryToolStripMenuItem.Name = "openGameDirectoryToolStripMenuItem";
             resources.ApplyResources(this.openGameDirectoryToolStripMenuItem, "openGameDirectoryToolStripMenuItem");
             this.openGameDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openGameDirectoryToolStripMenuItem_Click);
+            // 
+            // openReplayFolderToolStripMenuItem
+            // 
+            this.openReplayFolderToolStripMenuItem.Name = "openReplayFolderToolStripMenuItem";
+            resources.ApplyResources(this.openReplayFolderToolStripMenuItem, "openReplayFolderToolStripMenuItem");
+            this.openReplayFolderToolStripMenuItem.Click += new System.EventHandler(this.openReplayFolderToolStripMenuItem_Click);
+            // 
+            // watchLastReplayToolStripMenuItem
+            // 
+            this.watchLastReplayToolStripMenuItem.Name = "watchLastReplayToolStripMenuItem";
+            resources.ApplyResources(this.watchLastReplayToolStripMenuItem, "watchLastReplayToolStripMenuItem");
+            this.watchLastReplayToolStripMenuItem.Click += new System.EventHandler(this.watchLastReplayToolStripMenuItem_Click);
             // 
             // officialSiteToolStripMenuItem
             // 
@@ -144,17 +158,11 @@
             resources.ApplyResources(this.woWsStatsNumbersToolStripMenuItem, "woWsStatsNumbersToolStripMenuItem");
             this.woWsStatsNumbersToolStripMenuItem.Click += new System.EventHandler(this.woWsStatsNumbersToolStripMenuItem_Click);
             // 
-            // openReplayFolderToolStripMenuItem
+            // fixToolStripMenuItem
             // 
-            this.openReplayFolderToolStripMenuItem.Name = "openReplayFolderToolStripMenuItem";
-            resources.ApplyResources(this.openReplayFolderToolStripMenuItem, "openReplayFolderToolStripMenuItem");
-            this.openReplayFolderToolStripMenuItem.Click += new System.EventHandler(this.openReplayFolderToolStripMenuItem_Click);
-            // 
-            // watchLastReplayToolStripMenuItem
-            // 
-            this.watchLastReplayToolStripMenuItem.Name = "watchLastReplayToolStripMenuItem";
-            resources.ApplyResources(this.watchLastReplayToolStripMenuItem, "watchLastReplayToolStripMenuItem");
-            this.watchLastReplayToolStripMenuItem.Click += new System.EventHandler(this.watchLastReplayToolStripMenuItem_Click);
+            this.fixToolStripMenuItem.Name = "fixToolStripMenuItem";
+            resources.ApplyResources(this.fixToolStripMenuItem, "fixToolStripMenuItem");
+            this.fixToolStripMenuItem.Click += new System.EventHandler(this.fixToolStripMenuItem_Click);
             // 
             // WOWS
             // 
@@ -197,6 +205,7 @@
         private System.Windows.Forms.ToolStripMenuItem officialSiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openReplayFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem watchLastReplayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fixToolStripMenuItem;
     }
 }
 

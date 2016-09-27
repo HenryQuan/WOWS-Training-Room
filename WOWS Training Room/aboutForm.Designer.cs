@@ -49,6 +49,7 @@
             // 
             resources.ApplyResources(this.titleLabel, "titleLabel");
             this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
             // 
             // someTextLabel
             // 

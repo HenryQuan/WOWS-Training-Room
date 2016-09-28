@@ -384,7 +384,7 @@ namespace WOWS_Training_Room
         private void openReplayFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Open replay directory if there is one
-            string replayPath = DataStorage.getData(DataStorage.PATH);
+            string replayPath = DataStorage.getData(DataStorage.PATH) + REPLAYS;
 
             if (Directory.Exists(replayPath))
             {

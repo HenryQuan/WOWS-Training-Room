@@ -34,8 +34,8 @@ namespace WOWS_Training_Room
         const string WOWS_NUMEBR = @"http://wows-numbers.com/";
         const string WOWS_TODAY = @"https://warships.today/";
 
-        const string REPLAYS = @"/replays";
-        const string WOWS_GAME = @"/WorldOfWarships.exe";
+        const string REPLAYS = @"\replays";
+        const string WOWS_GAME = @"\WorldOfWarships.exe";
         const string TEMP_GAME = @"temp.wowsreplay";
         const string EXTENSION_NAME = @"wowsreplay";
 
@@ -404,7 +404,7 @@ namespace WOWS_Training_Room
 
             if (Directory.Exists(replayPath))
             {
-                // If the game is running the do nothing
+                // If the game is running then do nothing
                 if(!IsProcessOpen(processName))
                 {
                     DateTime lastHigh = new DateTime(1900, 1, 1);
@@ -414,6 +414,7 @@ namespace WOWS_Training_Room
                         DirectoryInfo fi1 = new DirectoryInfo(subdir);
                         DateTime created = fi1.LastWriteTime;
 
+                        // There is a temp file, just to filter it
                         if (!subdir.Contains(TEMP_GAME) && subdir.Contains(EXTENSION_NAME) && created > lastHigh)
                         {
                             highDir = subdir;
@@ -421,7 +422,7 @@ namespace WOWS_Training_Room
                         }
                     }
                     Console.WriteLine(highDir);
-                    Process.Start(highDir, replayPath + WOWS_GAME);
+                    Process.Start(highDir, DataStorage.getData(DataStorage.PATH) + WOWS_GAME);
 
                     // Close this program
                     Application.ExitThread();

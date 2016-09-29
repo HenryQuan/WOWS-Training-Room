@@ -9,7 +9,7 @@ namespace WOWS_Training_Room
     {
 
         const string GITHUB = @"https://github.com/HenryQuan/WOWS-Training-Room/";
-        const string ASLAIN = @"http://forum.worldofwarships.com/index.php?/topic/25508-mod05111-aslains-wows-modpack-installer-wpicture-preview-v5111-00-20-09-2016/";
+        const string ASLAIN = @"http://aslain.com/index.php?/topic/2020-05111-aslains-wows-modpack-installer-wpicture-preview/";
 
         public aboutForm()
         {

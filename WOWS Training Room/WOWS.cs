@@ -388,7 +388,7 @@ namespace WOWS_Training_Room
 
             if (Directory.Exists(replayPath))
             {
-                Process.Start(replayPath + REPLAYS);
+                Process.Start(replayPath);
             }
             else
             {

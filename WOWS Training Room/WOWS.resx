@@ -321,6 +321,12 @@
   <data name="wOWSStatWebsiteToolStripMenuItem.Text" xml:space="preserve">
     <value>WOWS Stats Website</value>
   </data>
+  <data name="removeModsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="removeModsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove Mods</value>
+  </data>
   <data name="fixToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 22</value>
   </data>
@@ -720,6 +726,12 @@
     <value>fixToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;fixToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeModsToolStripMenuItem.Name" xml:space="preserve">
+    <value>removeModsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;removeModsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

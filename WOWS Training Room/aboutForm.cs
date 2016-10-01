@@ -9,6 +9,7 @@ namespace WOWS_Training_Room
     {
 
         const string GITHUB = @"https://github.com/HenryQuan/WOWS-Training-Room/";
+        // It is a great mod... I want to do something like this one day
         const string ASLAIN = @"http://aslain.com/index.php?/topic/2020-05111-aslains-wows-modpack-installer-wpicture-preview/";
 
         public aboutForm()

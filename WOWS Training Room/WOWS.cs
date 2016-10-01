@@ -38,6 +38,7 @@ namespace WOWS_Training_Room
         const string WOWS_GAME = @"\WorldOfWarships.exe";
         const string TEMP_GAME = @"temp.wowsreplay";
         const string EXTENSION_NAME = @"wowsreplay";
+        const string RES_MOD = @"\res_mods";
 
         public WOWS()
         {
@@ -477,6 +478,28 @@ namespace WOWS_Training_Room
                 {
                     // Usually, there is a preferences.xml
                     MessageBox.Show(@"There is no backup file.");
+                }
+            }
+        }
+
+        private void removeModsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Double check
+            var reply = MessageBox.Show(@"Do you want to remove all MODs?" + "\n" + @"Please only use this if you found your game having strange behavior.",
+                @"Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (reply == DialogResult.Yes)
+            {
+                string modPath = DataStorage.getData(DataStorage.PATH) + RES_MOD;
+                if (Directory.Exists(modPath))
+                {
+                    // Remove everything inside that folder
+                    Directory.Delete(modPath, recursive: true);
+                    // Create an empty folder
+                    Directory.CreateDirectory(modPath);
+                }
+                else
+                {
+                    MessageBox.Show(@"There is no MOD to remove.");
                 }
             }
         }

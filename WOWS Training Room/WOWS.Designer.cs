@@ -46,6 +46,7 @@
             this.warshipsTodayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.woWsStatsNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeModsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +111,7 @@
             this.watchLastReplayToolStripMenuItem,
             this.officialSiteToolStripMenuItem,
             this.wOWSStatWebsiteToolStripMenuItem,
+            this.removeModsToolStripMenuItem,
             this.fixToolStripMenuItem});
             this.miscanellousToolStripMenuItem.Name = "miscanellousToolStripMenuItem";
             resources.ApplyResources(this.miscanellousToolStripMenuItem, "miscanellousToolStripMenuItem");
@@ -164,6 +166,12 @@
             resources.ApplyResources(this.fixToolStripMenuItem, "fixToolStripMenuItem");
             this.fixToolStripMenuItem.Click += new System.EventHandler(this.fixToolStripMenuItem_Click);
             // 
+            // removeModsToolStripMenuItem
+            // 
+            this.removeModsToolStripMenuItem.Name = "removeModsToolStripMenuItem";
+            resources.ApplyResources(this.removeModsToolStripMenuItem, "removeModsToolStripMenuItem");
+            this.removeModsToolStripMenuItem.Click += new System.EventHandler(this.removeModsToolStripMenuItem_Click);
+            // 
             // WOWS
             // 
             resources.ApplyResources(this, "$this");
@@ -206,6 +214,7 @@
         private System.Windows.Forms.ToolStripMenuItem openReplayFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem watchLastReplayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fixToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeModsToolStripMenuItem;
     }
 }
 

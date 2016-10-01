@@ -8,10 +8,10 @@ namespace WOWS_Training_Room
     public partial class WOWS : Form
     { 
         // Constants for display texts.
-        const string TRAINING_ENABLE = @"Enable Training Room";
-        const string TRAINING_DISABLE = @"Disable Training Room";
-        const string REPLAY_ENABLE = @"Enable Replay Mode";
-        const string REPLAY_DISABLE = @"Disable Replay Mode";
+        string TRAINING_ENABLE = Resources.GlobalText.OPEN_TRIANING;
+        string TRAINING_DISABLE = Resources.GlobalText.CLOSE_TRAINING;
+        string REPLAY_ENABLE = Resources.GlobalText.OPEN_REPLAY;
+        string REPLAY_DISABLE = Resources.GlobalText.CLOSE_REPLAY;
 
         // Constants for whether training room and replay mode is enabled.
         public const string ENABLED = "1";
@@ -83,11 +83,11 @@ namespace WOWS_Training_Room
             if (oldLaunchTime == 0)
             {
                 // During first Launch popup a message
-                MessageBox.Show(@"Welcome >_<");
+                MessageBox.Show(Resources.GlobalText.WELCOME);
             }
             else if (oldLaunchTime < 0)
             {
-                MessageBox.Show(@"Please do not edit data.txt");
+                MessageBox.Show(Resources.GlobalText.NO_HACKING);
                 newLaunchTime = 0;
             }
             // Add one to launchTime and save it.
@@ -134,12 +134,12 @@ namespace WOWS_Training_Room
             if (gamePath == @"")
             {
                 // If user does not enter it yet
-                MessageBox.Show(@"Please paste your game path into the textbox below.");
+                MessageBox.Show(Resources.GlobalText.PASTE_PATH);
             }
             else if (!gamePath.Contains(@"\") || !gamePath.Contains(@":"))
             {
                 // A simple check for address
-                MessageBox.Show(@"Please paste a valid game path below.");
+                MessageBox.Show(Resources.GlobalText.PASTE_VALID_PATH);
             }
             else
             {
@@ -344,7 +344,7 @@ namespace WOWS_Training_Room
                 }
                 else
                 {
-                    MessageBox.Show("WOWS ASIA" + "\n" + "Worst Server Ever!");
+                    MessageBox.Show("WOWS ASIA" + "\n" + Resources.GlobalText.WORSE_SERVER);
                     Process.Start(gamePath + DataStorage.UNINSTALL_EXE);
                 }
                 Application.Exit();
@@ -393,7 +393,7 @@ namespace WOWS_Training_Room
             }
             else
             {
-                MessageBox.Show(@"Please enable replay mode first");
+                MessageBox.Show(Resources.GlobalText.ENABLE_REPLAY_FIRST);
             }
         }
 
@@ -430,12 +430,12 @@ namespace WOWS_Training_Room
                 }
                 else
                 {
-                    MessageBox.Show(@"Please close the game first before watching your last battle.");
+                    MessageBox.Show(Resources.GlobalText.CLOSE_GAME);
                 }
             }
             else
             {
-                MessageBox.Show(@"Please enable replay mode first");
+                MessageBox.Show(Resources.GlobalText.ENJOY_GAME);
             }
         }
 
@@ -457,8 +457,8 @@ namespace WOWS_Training_Room
 
         private void fixToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var reply = MessageBox.Show(@"Are you sure to use this function?" + "\n" + @"Please only use this if you found your game having strange behavior." , 
-                @"Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var reply = MessageBox.Show(Resources.GlobalText.DOUBLE_CHECK + "\n" + Resources.GlobalText.STRANGE_BEHAVIOUR, 
+                Resources.GlobalText.WARNING, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (reply == DialogResult.Yes)
             {
                 string preferences = DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML;
@@ -477,7 +477,7 @@ namespace WOWS_Training_Room
                 else
                 {
                     // Usually, there is a preferences.xml
-                    MessageBox.Show(@"There is no backup file.");
+                    MessageBox.Show(Resources.GlobalText.NO_BACKUP);
                 }
             }
         }
@@ -485,8 +485,8 @@ namespace WOWS_Training_Room
         private void removeModsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Double check
-            var reply = MessageBox.Show(@"Do you want to remove all MODs?" + "\n" + @"Please only use this if you found your game having strange behavior.",
-                @"Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var reply = MessageBox.Show(Resources.GlobalText.REMOVE_MODS + "\n" + Resources.GlobalText.STRANGE_BEHAVIOUR,
+                Resources.GlobalText.WARNING, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (reply == DialogResult.Yes)
             {
                 string modPath = DataStorage.getData(DataStorage.PATH) + RES_MOD;
@@ -499,7 +499,7 @@ namespace WOWS_Training_Room
                 }
                 else
                 {
-                    MessageBox.Show(@"There is no MOD to remove.");
+                    MessageBox.Show(Resources.GlobalText.NO_MOD);
                 }
             }
         }

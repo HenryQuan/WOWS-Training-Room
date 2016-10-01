@@ -1,4 +1,7 @@
-﻿namespace WOWS_Training_Room
+﻿using System.Globalization;
+using System.Threading;
+
+namespace WOWS_Training_Room
 {
     partial class WOWS
     {
@@ -29,6 +32,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WOWS));
+       
             this.trainingRoom = new System.Windows.Forms.Button();
             this.replayMode = new System.Windows.Forms.Button();
             this.pathBox = new System.Windows.Forms.TextBox();
@@ -45,8 +49,8 @@
             this.wOWSStatWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warshipsTodayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.woWsStatsNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeModsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,8 +80,8 @@
             // 
             // launchGameBtn
             // 
-            this.launchGameBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.launchGameBtn, "launchGameBtn");
+            this.launchGameBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.launchGameBtn.Name = "launchGameBtn";
             this.launchGameBtn.UseVisualStyleBackColor = true;
             this.launchGameBtn.Click += new System.EventHandler(this.launchGameBtn_Click);
@@ -91,20 +95,21 @@
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // mainMenu
             // 
+            resources.ApplyResources(this.mainMenu, "mainMenu");
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miscanellousToolStripMenuItem,
             this.aboutToolStripMenuItem});
-            resources.ApplyResources(this.mainMenu, "mainMenu");
             this.mainMenu.Name = "mainMenu";
             // 
             // miscanellousToolStripMenuItem
             // 
+            resources.ApplyResources(this.miscanellousToolStripMenuItem, "miscanellousToolStripMenuItem");
             this.miscanellousToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openGameDirectoryToolStripMenuItem,
             this.openReplayFolderToolStripMenuItem,
@@ -114,63 +119,62 @@
             this.removeModsToolStripMenuItem,
             this.fixToolStripMenuItem});
             this.miscanellousToolStripMenuItem.Name = "miscanellousToolStripMenuItem";
-            resources.ApplyResources(this.miscanellousToolStripMenuItem, "miscanellousToolStripMenuItem");
             // 
             // openGameDirectoryToolStripMenuItem
             // 
-            this.openGameDirectoryToolStripMenuItem.Name = "openGameDirectoryToolStripMenuItem";
             resources.ApplyResources(this.openGameDirectoryToolStripMenuItem, "openGameDirectoryToolStripMenuItem");
+            this.openGameDirectoryToolStripMenuItem.Name = "openGameDirectoryToolStripMenuItem";
             this.openGameDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openGameDirectoryToolStripMenuItem_Click);
             // 
             // openReplayFolderToolStripMenuItem
             // 
-            this.openReplayFolderToolStripMenuItem.Name = "openReplayFolderToolStripMenuItem";
             resources.ApplyResources(this.openReplayFolderToolStripMenuItem, "openReplayFolderToolStripMenuItem");
+            this.openReplayFolderToolStripMenuItem.Name = "openReplayFolderToolStripMenuItem";
             this.openReplayFolderToolStripMenuItem.Click += new System.EventHandler(this.openReplayFolderToolStripMenuItem_Click);
             // 
             // watchLastReplayToolStripMenuItem
             // 
-            this.watchLastReplayToolStripMenuItem.Name = "watchLastReplayToolStripMenuItem";
             resources.ApplyResources(this.watchLastReplayToolStripMenuItem, "watchLastReplayToolStripMenuItem");
+            this.watchLastReplayToolStripMenuItem.Name = "watchLastReplayToolStripMenuItem";
             this.watchLastReplayToolStripMenuItem.Click += new System.EventHandler(this.watchLastReplayToolStripMenuItem_Click);
             // 
             // officialSiteToolStripMenuItem
             // 
-            this.officialSiteToolStripMenuItem.Name = "officialSiteToolStripMenuItem";
             resources.ApplyResources(this.officialSiteToolStripMenuItem, "officialSiteToolStripMenuItem");
+            this.officialSiteToolStripMenuItem.Name = "officialSiteToolStripMenuItem";
             this.officialSiteToolStripMenuItem.Click += new System.EventHandler(this.officialSiteToolStripMenuItem_Click);
             // 
             // wOWSStatWebsiteToolStripMenuItem
             // 
+            resources.ApplyResources(this.wOWSStatWebsiteToolStripMenuItem, "wOWSStatWebsiteToolStripMenuItem");
             this.wOWSStatWebsiteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.warshipsTodayToolStripMenuItem,
             this.woWsStatsNumbersToolStripMenuItem});
             this.wOWSStatWebsiteToolStripMenuItem.Name = "wOWSStatWebsiteToolStripMenuItem";
-            resources.ApplyResources(this.wOWSStatWebsiteToolStripMenuItem, "wOWSStatWebsiteToolStripMenuItem");
             // 
             // warshipsTodayToolStripMenuItem
             // 
-            this.warshipsTodayToolStripMenuItem.Name = "warshipsTodayToolStripMenuItem";
             resources.ApplyResources(this.warshipsTodayToolStripMenuItem, "warshipsTodayToolStripMenuItem");
+            this.warshipsTodayToolStripMenuItem.Name = "warshipsTodayToolStripMenuItem";
             this.warshipsTodayToolStripMenuItem.Click += new System.EventHandler(this.warshipsTodayToolStripMenuItem_Click);
             // 
             // woWsStatsNumbersToolStripMenuItem
             // 
-            this.woWsStatsNumbersToolStripMenuItem.Name = "woWsStatsNumbersToolStripMenuItem";
             resources.ApplyResources(this.woWsStatsNumbersToolStripMenuItem, "woWsStatsNumbersToolStripMenuItem");
+            this.woWsStatsNumbersToolStripMenuItem.Name = "woWsStatsNumbersToolStripMenuItem";
             this.woWsStatsNumbersToolStripMenuItem.Click += new System.EventHandler(this.woWsStatsNumbersToolStripMenuItem_Click);
-            // 
-            // fixToolStripMenuItem
-            // 
-            this.fixToolStripMenuItem.Name = "fixToolStripMenuItem";
-            resources.ApplyResources(this.fixToolStripMenuItem, "fixToolStripMenuItem");
-            this.fixToolStripMenuItem.Click += new System.EventHandler(this.fixToolStripMenuItem_Click);
             // 
             // removeModsToolStripMenuItem
             // 
-            this.removeModsToolStripMenuItem.Name = "removeModsToolStripMenuItem";
             resources.ApplyResources(this.removeModsToolStripMenuItem, "removeModsToolStripMenuItem");
+            this.removeModsToolStripMenuItem.Name = "removeModsToolStripMenuItem";
             this.removeModsToolStripMenuItem.Click += new System.EventHandler(this.removeModsToolStripMenuItem_Click);
+            // 
+            // fixToolStripMenuItem
+            // 
+            resources.ApplyResources(this.fixToolStripMenuItem, "fixToolStripMenuItem");
+            this.fixToolStripMenuItem.Name = "fixToolStripMenuItem";
+            this.fixToolStripMenuItem.Click += new System.EventHandler(this.fixToolStripMenuItem_Click);
             // 
             // WOWS
             // 
@@ -185,6 +189,7 @@
             this.Controls.Add(this.mainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.mainMenu;
+            this.MaximizeBox = false;
             this.Name = "WOWS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WOWS_FormClosing);
             this.Load += new System.EventHandler(this.WOWS_Load);

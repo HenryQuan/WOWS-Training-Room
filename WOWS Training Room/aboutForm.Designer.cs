@@ -29,21 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aboutForm));
-            this.HQBox = new System.Windows.Forms.PictureBox();
             this.titleLabel = new System.Windows.Forms.Label();
             this.someTextLabel = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
             this.uninstallBtn = new System.Windows.Forms.Button();
+            this.HQBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.HQBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // HQBox
-            // 
-            this.HQBox.Image = global::WOWS_Training_Room.Properties.Resources.HenryQuan;
-            resources.ApplyResources(this.HQBox, "HQBox");
-            this.HQBox.Name = "HQBox";
-            this.HQBox.TabStop = false;
-            this.HQBox.Click += new System.EventHandler(this.HQBox_Click);
             // 
             // titleLabel
             // 
@@ -68,6 +60,14 @@
             this.uninstallBtn.Name = "uninstallBtn";
             this.uninstallBtn.UseVisualStyleBackColor = true;
             this.uninstallBtn.Click += new System.EventHandler(this.uninstallBtn_Click);
+            // 
+            // HQBox
+            // 
+            this.HQBox.Image = global::WOWS_Training_Room.Properties.Resources.HenryQuan;
+            resources.ApplyResources(this.HQBox, "HQBox");
+            this.HQBox.Name = "HQBox";
+            this.HQBox.TabStop = false;
+            this.HQBox.Click += new System.EventHandler(this.HQBox_Click);
             // 
             // aboutForm
             // 

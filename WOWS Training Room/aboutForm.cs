@@ -15,9 +15,7 @@ namespace WOWS_Training_Room
         public aboutForm()
         {
             InitializeComponent();
-
-            someTextLabel.Text = @"If more features are needed, please download and install modpack online. This program is only an alternative way to enable some hidden features."
-                    + "\n" + @"Enjoy playing World of Warships!";
+            someTextLabel.Text = Resources.GlobalText.MORE_FUNCTIONS + "\n" + Resources.GlobalText.ENJOY_GAME;
         }
 
         private void HQBox_Click(object sender, EventArgs e)
@@ -35,10 +33,10 @@ namespace WOWS_Training_Room
         private void uninstallBtn_Click(object sender, EventArgs e)
         {
             // Double check, this can not be un-done
-            var reply = MessageBox.Show(@"Would you like to uninstall this program?", @"Uninstalling this program", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var reply = MessageBox.Show(Resources.GlobalText.UNINSTALL_THIS_PROGRAM_TEXT, Resources.GlobalText.UNINSTALL_THIS_PROGRAM, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (reply == DialogResult.Yes)
             {
-                MessageBox.Show(@"Thank you for using this program ^_^");
+                MessageBox.Show(Resources.GlobalText.THX_FOR_USING);
                 selfDestruction();
             }
         }

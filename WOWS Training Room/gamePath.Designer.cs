@@ -49,8 +49,8 @@
             // 
             // checkPathBtn
             // 
-            this.checkPathBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.checkPathBtn, "checkPathBtn");
+            this.checkPathBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.checkPathBtn.Name = "checkPathBtn";
             this.checkPathBtn.UseVisualStyleBackColor = true;
             this.checkPathBtn.Click += new System.EventHandler(this.checkPathBtn_Click);

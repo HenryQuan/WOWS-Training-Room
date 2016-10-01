@@ -24,7 +24,7 @@ namespace WOWS_Training_Room
             } 
             else
             {
-                MessageBox.Show(@"This path is not correct.");
+                MessageBox.Show(Resources.GlobalText.PATH_NOT_CORRECT);
             }
         }
 

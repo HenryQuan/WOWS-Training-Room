@@ -117,136 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkPathBtn.Text" xml:space="preserve">
-    <value>Check</value>
+  <data name="CLOSE_GAME" xml:space="preserve">
+    <value>Please close the game first before watching your last battle.</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="loadPathBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="CLOSE_REPLAY" xml:space="preserve">
+    <value>Disable Replay Mode</value>
   </data>
-  <data name="&gt;&gt;someLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="CLOSE_TRAINING" xml:space="preserve">
+    <value>Disable Training Room</value>
   </data>
-  <data name="&gt;&gt;gamepathBox.Name" xml:space="preserve">
-    <value>gamepathBox</value>
+  <data name="DOUBLE_CHECK" xml:space="preserve">
+    <value>Are you sure to use this function?</value>
   </data>
-  <data name="checkPathBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="ENABLE_REPLAY_FIRST" xml:space="preserve">
+    <value>Please enable replay mode first.</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="checkPathBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 58</value>
+  <data name="ENJOY_GAME" xml:space="preserve">
+    <value>Enjoy playing World of Warships!</value>
   </data>
-  <data name="gamepathBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 20</value>
+  <data name="MORE_FUNCTIONS" xml:space="preserve">
+    <value>If more features are needed, please download and install modpack online. This program is only an alternative way to enable some hidden features.</value>
   </data>
-  <data name="loadPathBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 30</value>
+  <data name="NO_BACKUP" xml:space="preserve">
+    <value>There is no backup file.</value>
   </data>
-  <data name="&gt;&gt;gamepathBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="NO_HACKING" xml:space="preserve">
+    <value>Please do not edit data.txt</value>
   </data>
-  <data name="&gt;&gt;someLabel.Name" xml:space="preserve">
-    <value>someLabel</value>
+  <data name="NO_MOD" xml:space="preserve">
+    <value>There is no MOD to remove.</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>gamePath</value>
+  <data name="OPEN_REPLAY" xml:space="preserve">
+    <value>Enable Replay Mode</value>
   </data>
-  <data name="&gt;&gt;gamepathBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="OPEN_TRIANING" xml:space="preserve">
+    <value>Enable Training Room</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="someLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="PASTE_PATH" xml:space="preserve">
+    <value>Please paste your game path into the textbox below.</value>
   </data>
-  <data name="loadPathBtn.Text" xml:space="preserve">
-    <value>...</value>
+  <data name="PASTE_VALID_PATH" xml:space="preserve">
+    <value>Please paste a valid game path below.</value>
   </data>
-  <data name="&gt;&gt;checkPathBtn.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="PATH_NOT_CORRECT" xml:space="preserve">
+    <value>This path is not correct.</value>
   </data>
-  <data name="&gt;&gt;loadPathBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="REMOVE_MODS" xml:space="preserve">
+    <value>Do you want to remove all MODs?</value>
   </data>
-  <data name="checkPathBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="STRANGE_BEHAVIOUR" xml:space="preserve">
+    <value>Please only use this if you found your game having strange behaviour.</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>323, 88</value>
+  <data name="THX_FOR_USING" xml:space="preserve">
+    <value>Thank you for using this program ^_^</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="UNINSTALL_THIS_PROGRAM" xml:space="preserve">
+    <value>Uninstalling this program</value>
   </data>
-  <data name="&gt;&gt;loadPathBtn.Name" xml:space="preserve">
-    <value>loadPathBtn</value>
+  <data name="UNINSTALL_THIS_PROGRAM_TEXT" xml:space="preserve">
+    <value>Would you like to uninstall this program?</value>
   </data>
-  <data name="someLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="WARNING" xml:space="preserve">
+    <value>Warning!</value>
   </data>
-  <data name="gamepathBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="WELCOME" xml:space="preserve">
+    <value>Welcome &gt;_&lt;</value>
   </data>
-  <data name="&gt;&gt;checkPathBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="WORSE_SERVER" xml:space="preserve">
+    <value>Worst Server Ever!</value>
   </data>
-  <data name="&gt;&gt;someLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="gamepathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 31</value>
-  </data>
-  <data name="someLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 25</value>
-  </data>
-  <data name="&gt;&gt;checkPathBtn.Name" xml:space="preserve">
-    <value>checkPathBtn</value>
-  </data>
-  <data name="&gt;&gt;someLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;loadPathBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="loadPathBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="someLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;loadPathBtn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="someLabel.Text" xml:space="preserve">
-    <value>Please paste your game path in the texbox below</value>
-  </data>
-  <data name="loadPathBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="someLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;gamepathBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkPathBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="someLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="checkPathBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh-Hans</value>
-  </metadata>
 </root>

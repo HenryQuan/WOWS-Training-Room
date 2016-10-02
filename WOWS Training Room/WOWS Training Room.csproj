@@ -76,15 +76,20 @@
     <Compile Include="gamePath.Designer.cs">
       <DependentUpon>gamePath.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\GlobalText.zh_Hans.Designer.cs">
-      <DependentUpon>GlobalText.zh_Hans.resx</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\GlobalText.Designer.cs">
-      <DependentUpon>GlobalText.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlobalText.zh-Hans.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalText.zh-Hans.resx</DependentUpon>
     </Compile>
     <Compile Include="WOWS.cs">
       <SubType>Form</SubType>
@@ -94,11 +99,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WOWS.zh-Hans.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WOWS.zh-Hans.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="aboutForm.resx">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,31 +112,23 @@
       <DependentUpon>gamePath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="Resources\GlobalText.zh_Hans.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>GlobalText.zh_Hans.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\GlobalText.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>GlobalText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlobalText.zh-Hans.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalText.zh-Hans.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="WOWS.resx">
       <DependentUpon>WOWS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WOWS.zh-Hans.resx">
       <DependentUpon>WOWS.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>WOWS.zh-Hans.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,7 +144,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\WOWS Training Room.resources.dll" />
     <Content Include="TrainingRoom.ico" />
     <None Include="Resources\HenryQuan.jpg" />
   </ItemGroup>

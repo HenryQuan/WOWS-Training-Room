@@ -118,72 +118,72 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CLOSE_GAME" xml:space="preserve">
-    <value>Please close the game first before watching your last battle.</value>
+    <value>关闭游戏之后才可以看上次的战斗哦&gt;_&lt;</value>
   </data>
   <data name="CLOSE_REPLAY" xml:space="preserve">
-    <value>Disable Replay Mode</value>
+    <value>关闭回放功能</value>
   </data>
   <data name="CLOSE_TRAINING" xml:space="preserve">
-    <value>Disable Training Room</value>
+    <value>关闭训练房</value>
   </data>
   <data name="DOUBLE_CHECK" xml:space="preserve">
-    <value>Are you sure to use this function?</value>
+    <value>真的要使用这项功能么？</value>
   </data>
   <data name="ENABLE_REPLAY_FIRST" xml:space="preserve">
-    <value>Please enable replay mode first.</value>
+    <value>请先打开回放功能。</value>
   </data>
   <data name="ENJOY_GAME" xml:space="preserve">
-    <value>Enjoy playing World of Warships!</value>
+    <value>享受每一次战斗吧！</value>
   </data>
   <data name="MORE_FUNCTIONS" xml:space="preserve">
-    <value>If more features are needed, please download and install modpack online. This program is only an alternative way to enable some hidden features.</value>
+    <value>这只是一个辅助用的小程序。它可以启动回放功能，开启一次性的训练房和其他的一些小功能。如果需要更多的功能，请下载ASLAIN的MOD。</value>
   </data>
   <data name="NO_BACKUP" xml:space="preserve">
-    <value>There is no backup file.</value>
+    <value>还没有备份文件哦</value>
   </data>
   <data name="NO_HACKING" xml:space="preserve">
-    <value>Please do not edit data.txt</value>
+    <value>请不要修改数据文件</value>
   </data>
   <data name="NO_MOD" xml:space="preserve">
-    <value>There is no MOD to remove.</value>
+    <value>没有要删除的MOD。</value>
   </data>
   <data name="OPEN_REPLAY" xml:space="preserve">
-    <value>Enable Replay Mode</value>
+    <value>启动回放功能</value>
   </data>
   <data name="OPEN_TRIANING" xml:space="preserve">
-    <value>Enable Training Room</value>
+    <value>开启训练房</value>
   </data>
   <data name="PASTE_PATH" xml:space="preserve">
-    <value>Please paste your game path into the textbox below.</value>
+    <value>请将游戏路径复制到下面的文本框中。</value>
   </data>
   <data name="PASTE_VALID_PATH" xml:space="preserve">
-    <value>Please paste a valid game path below.</value>
+    <value>请复制一个有效的路径。</value>
   </data>
   <data name="PATH_NOT_CORRECT" xml:space="preserve">
-    <value>This path is not correct.</value>
+    <value>这个路径不正确。。。 姆姆姆&gt;_&lt; </value>
   </data>
   <data name="REMOVE_MODS" xml:space="preserve">
-    <value>Do you want to remove all MODs?</value>
+    <value>真的要删除所有安装的MOD么？</value>
   </data>
   <data name="STRANGE_BEHAVIOUR" xml:space="preserve">
-    <value>Please only use this if you found your game having strange behaviour.</value>
+    <value>如果无法正常进行游戏，请尝试这项功能。</value>
   </data>
   <data name="THX_FOR_USING" xml:space="preserve">
-    <value>Thank you for using this program ^_^</value>
+    <value>感谢你使用这个小程序 &gt;_&lt;</value>
   </data>
   <data name="UNINSTALL_THIS_PROGRAM" xml:space="preserve">
-    <value>Uninstalling this program</value>
+    <value>删除游戏</value>
   </data>
   <data name="UNINSTALL_THIS_PROGRAM_TEXT" xml:space="preserve">
-    <value>Would you like to uninstall this program?</value>
+    <value>真的要删除这个游戏么 &gt;_&lt;</value>
   </data>
   <data name="WARNING" xml:space="preserve">
-    <value>Warning!</value>
+    <value>警告！</value>
   </data>
   <data name="WELCOME" xml:space="preserve">
-    <value>Welcome &gt;_&lt;</value>
+    <value>欢迎哦 &gt;_&lt;</value>
   </data>
   <data name="WORSE_SERVER" xml:space="preserve">
-    <value>Worst Server Ever!</value>
+    <value>最差的服务器！</value>
   </data>
 </root>

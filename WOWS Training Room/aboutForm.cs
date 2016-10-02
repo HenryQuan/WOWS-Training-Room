@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
+using WOWS_Training_Room.Resources;
 
 namespace WOWS_Training_Room
 {
@@ -15,7 +16,7 @@ namespace WOWS_Training_Room
         public aboutForm()
         {
             InitializeComponent();
-            someTextLabel.Text = Resources.GlobalText.MORE_FUNCTIONS + "\n" + Resources.GlobalText.ENJOY_GAME;
+            someTextLabel.Text = GlobalText.MORE_FUNCTIONS + "\n" + GlobalText.ENJOY_GAME;
         }
 
         private void HQBox_Click(object sender, EventArgs e)
@@ -33,10 +34,10 @@ namespace WOWS_Training_Room
         private void uninstallBtn_Click(object sender, EventArgs e)
         {
             // Double check, this can not be un-done
-            var reply = MessageBox.Show(Resources.GlobalText.UNINSTALL_THIS_PROGRAM_TEXT, Resources.GlobalText.UNINSTALL_THIS_PROGRAM, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var reply = MessageBox.Show(GlobalText.UNINSTALL_THIS_PROGRAM_TEXT, GlobalText.UNINSTALL_THIS_PROGRAM, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (reply == DialogResult.Yes)
             {
-                MessageBox.Show(Resources.GlobalText.THX_FOR_USING);
+                MessageBox.Show(GlobalText.THX_FOR_USING);
                 selfDestruction();
             }
         }

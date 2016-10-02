@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
+using WOWS_Training_Room.Resources;
 
 namespace WOWS_Training_Room
 {
@@ -20,15 +21,15 @@ namespace WOWS_Training_Room
 
             // Check the language wich user uses
             CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+            Console.WriteLine(currentCulture.EnglishName);
 
             // Currently, there is only globalization for simplified chinese
-            if (currentCulture.DisplayName.Contains(@"Chinese") &&
-                currentCulture.DisplayName.Contains(@"Simplified"))
+            if (currentCulture.EnglishName.Contains(@"Chinese") &&
+                currentCulture.EnglishName.Contains(@"Simplified"))
             {
                 Thread.CurrentThread.CurrentCulture = new CultureInfo(@"zh-Hans");
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(@"zh-Hans");
             }
-
 
             // Check if the path is being Created
             if (!File.Exists(WOWS.targetFile) || DataStorage.getData(DataStorage.PATH) == @"")

@@ -2,16 +2,20 @@
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
+using System.Threading;
+using System.Globalization;
+using WOWS_Training_Room.Resources;
 
 namespace WOWS_Training_Room
 {
     public partial class WOWS : Form
     { 
         // Constants for display texts.
-        string TRAINING_ENABLE = Resources.GlobalText.OPEN_TRIANING;
-        string TRAINING_DISABLE = Resources.GlobalText.CLOSE_TRAINING;
-        string REPLAY_ENABLE = Resources.GlobalText.OPEN_REPLAY;
-        string REPLAY_DISABLE = Resources.GlobalText.CLOSE_REPLAY;
+        string TRAINING_ENABLE = GlobalText.OPEN_TRIANING;
+        string TRAINING_DISABLE = GlobalText.CLOSE_TRAINING;
+        string REPLAY_ENABLE = GlobalText.OPEN_REPLAY;
+        string REPLAY_DISABLE = GlobalText.CLOSE_REPLAY;
 
         // Constants for whether training room and replay mode is enabled.
         public const string ENABLED = "1";
@@ -83,11 +87,11 @@ namespace WOWS_Training_Room
             if (oldLaunchTime == 0)
             {
                 // During first Launch popup a message
-                MessageBox.Show(Resources.GlobalText.WELCOME);
+                MessageBox.Show(GlobalText.WELCOME);
             }
             else if (oldLaunchTime < 0)
             {
-                MessageBox.Show(Resources.GlobalText.NO_HACKING);
+                MessageBox.Show(GlobalText.NO_HACKING);
                 newLaunchTime = 0;
             }
             // Add one to launchTime and save it.
@@ -134,12 +138,12 @@ namespace WOWS_Training_Room
             if (gamePath == @"")
             {
                 // If user does not enter it yet
-                MessageBox.Show(Resources.GlobalText.PASTE_PATH);
+                MessageBox.Show(GlobalText.PASTE_PATH);
             }
             else if (!gamePath.Contains(@"\") || !gamePath.Contains(@":"))
             {
                 // A simple check for address
-                MessageBox.Show(Resources.GlobalText.PASTE_VALID_PATH);
+                MessageBox.Show(GlobalText.PASTE_VALID_PATH);
             }
             else
             {
@@ -344,7 +348,7 @@ namespace WOWS_Training_Room
                 }
                 else
                 {
-                    MessageBox.Show("WOWS ASIA" + "\n" + Resources.GlobalText.WORSE_SERVER);
+                    MessageBox.Show("WOWS ASIA" + "\n" + GlobalText.WORSE_SERVER);
                     Process.Start(gamePath + DataStorage.UNINSTALL_EXE);
                 }
                 Application.Exit();
@@ -393,7 +397,7 @@ namespace WOWS_Training_Room
             }
             else
             {
-                MessageBox.Show(Resources.GlobalText.ENABLE_REPLAY_FIRST);
+                MessageBox.Show(GlobalText.ENABLE_REPLAY_FIRST);
             }
         }
 
@@ -430,12 +434,12 @@ namespace WOWS_Training_Room
                 }
                 else
                 {
-                    MessageBox.Show(Resources.GlobalText.CLOSE_GAME);
+                    MessageBox.Show(GlobalText.CLOSE_GAME);
                 }
             }
             else
             {
-                MessageBox.Show(Resources.GlobalText.ENJOY_GAME);
+                MessageBox.Show(GlobalText.ENJOY_GAME);
             }
         }
 
@@ -457,8 +461,8 @@ namespace WOWS_Training_Room
 
         private void fixToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var reply = MessageBox.Show(Resources.GlobalText.DOUBLE_CHECK + "\n" + Resources.GlobalText.STRANGE_BEHAVIOUR, 
-                Resources.GlobalText.WARNING, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var reply = MessageBox.Show(GlobalText.DOUBLE_CHECK + "\n" + GlobalText.STRANGE_BEHAVIOUR, 
+                GlobalText.WARNING, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (reply == DialogResult.Yes)
             {
                 string preferences = DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML;
@@ -477,7 +481,7 @@ namespace WOWS_Training_Room
                 else
                 {
                     // Usually, there is a preferences.xml
-                    MessageBox.Show(Resources.GlobalText.NO_BACKUP);
+                    MessageBox.Show(GlobalText.NO_BACKUP);
                 }
             }
         }
@@ -485,8 +489,8 @@ namespace WOWS_Training_Room
         private void removeModsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Double check
-            var reply = MessageBox.Show(Resources.GlobalText.REMOVE_MODS + "\n" + Resources.GlobalText.STRANGE_BEHAVIOUR,
-                Resources.GlobalText.WARNING, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var reply = MessageBox.Show(GlobalText.REMOVE_MODS + "\n" + GlobalText.STRANGE_BEHAVIOUR,
+                GlobalText.WARNING, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (reply == DialogResult.Yes)
             {
                 string modPath = DataStorage.getData(DataStorage.PATH) + RES_MOD;
@@ -499,7 +503,7 @@ namespace WOWS_Training_Room
                 }
                 else
                 {
-                    MessageBox.Show(Resources.GlobalText.NO_MOD);
+                    MessageBox.Show(GlobalText.NO_MOD);
                 }
             }
         }

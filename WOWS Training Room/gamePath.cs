@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using WOWS_Training_Room.Resources;
 
 namespace WOWS_Training_Room
 {
@@ -24,7 +25,7 @@ namespace WOWS_Training_Room
             } 
             else
             {
-                MessageBox.Show(Resources.GlobalText.PATH_NOT_CORRECT);
+                MessageBox.Show(GlobalText.PATH_NOT_CORRECT);
             }
         }
 

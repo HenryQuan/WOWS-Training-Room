@@ -61,7 +61,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 关闭游戏之后才可以看上次的战斗哦&gt;_&lt;.
+        ///   Looks up a localized string similar to Please close the game first before watching your last battle..
         /// </summary>
         public static string CLOSE_GAME {
             get {
@@ -70,7 +70,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 关闭回放功能.
+        ///   Looks up a localized string similar to Disable Replay Mode.
         /// </summary>
         public static string CLOSE_REPLAY {
             get {
@@ -79,7 +79,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 关闭训练房.
+        ///   Looks up a localized string similar to Disable Training Room.
         /// </summary>
         public static string CLOSE_TRAINING {
             get {
@@ -88,7 +88,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 真的要使用这项功能么？.
+        ///   Looks up a localized string similar to Are you sure to use this function?.
         /// </summary>
         public static string DOUBLE_CHECK {
             get {
@@ -97,7 +97,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 请先打开回放功能。.
+        ///   Looks up a localized string similar to Please enable replay mode first..
         /// </summary>
         public static string ENABLE_REPLAY_FIRST {
             get {
@@ -106,7 +106,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 享受每一次战斗吧！.
+        ///   Looks up a localized string similar to Enjoy playing World of Warships!.
         /// </summary>
         public static string ENJOY_GAME {
             get {
@@ -115,7 +115,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 这只是一个辅助用的小程序。它可以启动回放功能，开启一次性的训练房和其他的一些小功能。如果需要更多的功能，请下载ASLAIN的MOD。.
+        ///   Looks up a localized string similar to If more features are needed, please download and install modpack online. This program is only an alternative way to enable some hidden features..
         /// </summary>
         public static string MORE_FUNCTIONS {
             get {
@@ -124,7 +124,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 还没有备份文件哦.
+        ///   Looks up a localized string similar to There is no backup file..
         /// </summary>
         public static string NO_BACKUP {
             get {
@@ -133,7 +133,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 请不要修改数据文件.
+        ///   Looks up a localized string similar to Please do not edit data.txt.
         /// </summary>
         public static string NO_HACKING {
             get {
@@ -142,7 +142,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 没有要删除的MOD。.
+        ///   Looks up a localized string similar to There is no MOD to remove..
         /// </summary>
         public static string NO_MOD {
             get {
@@ -151,7 +151,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 启动回放功能.
+        ///   Looks up a localized string similar to Enable Replay Mode.
         /// </summary>
         public static string OPEN_REPLAY {
             get {
@@ -160,7 +160,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 开启训练房.
+        ///   Looks up a localized string similar to Enable Training Room.
         /// </summary>
         public static string OPEN_TRIANING {
             get {
@@ -169,7 +169,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 请将游戏路径复制到下面的文本框中。.
+        ///   Looks up a localized string similar to Please paste your game path into the textbox below..
         /// </summary>
         public static string PASTE_PATH {
             get {
@@ -178,7 +178,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 请复制一个有效的路径。.
+        ///   Looks up a localized string similar to Please paste a valid game path below..
         /// </summary>
         public static string PASTE_VALID_PATH {
             get {
@@ -187,7 +187,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 这个路径不正确。。。 姆姆姆&gt;_&lt; .
+        ///   Looks up a localized string similar to This path is not correct..
         /// </summary>
         public static string PATH_NOT_CORRECT {
             get {
@@ -196,7 +196,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 真的要删除所有安装的MOD么？.
+        ///   Looks up a localized string similar to Do you want to remove all MODs?.
         /// </summary>
         public static string REMOVE_MODS {
             get {
@@ -205,7 +205,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 如果无法正常进行游戏，请尝试这项功能。.
+        ///   Looks up a localized string similar to Please only use this if you found your game having strange behaviour..
         /// </summary>
         public static string STRANGE_BEHAVIOUR {
             get {
@@ -214,7 +214,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 感谢你使用这个小程序 &gt;_&lt;.
+        ///   Looks up a localized string similar to Thank you for using this program ^_^.
         /// </summary>
         public static string THX_FOR_USING {
             get {
@@ -223,7 +223,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 删除游戏.
+        ///   Looks up a localized string similar to Uninstalling this program.
         /// </summary>
         public static string UNINSTALL_THIS_PROGRAM {
             get {
@@ -232,7 +232,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 真的要删除这个游戏么 &gt;_&lt;.
+        ///   Looks up a localized string similar to Would you like to uninstall this program?.
         /// </summary>
         public static string UNINSTALL_THIS_PROGRAM_TEXT {
             get {
@@ -241,7 +241,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 警告！.
+        ///   Looks up a localized string similar to Warning!.
         /// </summary>
         public static string WARNING {
             get {
@@ -250,7 +250,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 欢迎哦 &gt;_&lt;.
+        ///   Looks up a localized string similar to Welcome &gt;_&lt;.
         /// </summary>
         public static string WELCOME {
             get {
@@ -259,7 +259,7 @@ namespace WOWS_Training_Room.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 最差的服务器！.
+        ///   Looks up a localized string similar to Worst Server Ever!.
         /// </summary>
         public static string WORSE_SERVER {
             get {

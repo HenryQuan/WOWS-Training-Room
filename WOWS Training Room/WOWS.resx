@@ -134,17 +134,17 @@
   <data name="mainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;uninstallGameBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;trainingRoom.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="openGameDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>217, 22</value>
   </data>
   <data name="&gt;&gt;removeModsToolStripMenuItem.Name" xml:space="preserve">
     <value>removeModsToolStripMenuItem</value>
+  </data>
+  <data name="trainingRoom.Text" xml:space="preserve">
+    <value>Enable Training Room</value>
   </data>
   <data name="&gt;&gt;replayMode.Name" xml:space="preserve">
     <value>replayMode</value>
@@ -168,11 +168,11 @@
   <data name="uninstallGameBtn.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="removeModsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+  <data name="&gt;&gt;mainMenu.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;pathBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="removeModsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
   </data>
   <data name="&gt;&gt;warshipsTodayToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -186,8 +186,11 @@
   <data name="gameDirectoryLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;officialSiteToolStripMenuItem.Name" xml:space="preserve">
+    <value>officialSiteToolStripMenuItem</value>
+  </data>
   <data name="wOWSStatWebsiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>217, 22</value>
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Name" xml:space="preserve">
     <value>aboutToolStripMenuItem</value>
@@ -201,11 +204,17 @@
   <data name="&gt;&gt;openGameDirectoryToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>WOWS Training Room</value>
+  </data>
   <data name="&gt;&gt;miscanellousToolStripMenuItem.Name" xml:space="preserve">
     <value>miscanellousToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;gameDirectoryLabel.Name" xml:space="preserve">
     <value>gameDirectoryLabel</value>
+  </data>
+  <data name="&gt;&gt;uninstallGameBtn.Name" xml:space="preserve">
+    <value>uninstallGameBtn</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -218,6 +227,9 @@
   </data>
   <data name="watchLastReplayToolStripMenuItem.Text" xml:space="preserve">
     <value>Watch Last Battle</value>
+  </data>
+  <data name="&gt;&gt;trainingRoom.Name" xml:space="preserve">
+    <value>trainingRoom</value>
   </data>
   <data name="removeModsToolStripMenuItem.Text" xml:space="preserve">
     <value>Remove Mods</value>
@@ -235,10 +247,10 @@
     <value>pathBox</value>
   </data>
   <data name="watchLastReplayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>217, 22</value>
   </data>
   <data name="woWsStatsNumbersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
+    <value>172, 22</value>
   </data>
   <data name="mainMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -246,11 +258,14 @@
   <data name="&gt;&gt;removeModsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;launchGameBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="officialSiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Official Site</value>
   </data>
   <data name="&gt;&gt;warshipsTodayToolStripMenuItem.Name" xml:space="preserve">
     <value>warshipsTodayToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fixToolStripMenuItem.Name" xml:space="preserve">
+    <value>fixToolStripMenuItem</value>
   </data>
   <data name="uninstallGameBtn.Text" xml:space="preserve">
     <value>Uninstall Game</value>
@@ -282,8 +297,8 @@
   <data name="launchGameBtn.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;uninstallGameBtn.Name" xml:space="preserve">
-    <value>uninstallGameBtn</value>
+  <data name="&gt;&gt;uninstallGameBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;pathBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -297,8 +312,11 @@
   <data name="&gt;&gt;trainingRoom.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mainMenu.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;pathBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 25</value>
   </data>
   <data name="trainingRoom.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 23</value>
@@ -318,17 +336,14 @@
   <data name="&gt;&gt;fixToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;officialSiteToolStripMenuItem.Name" xml:space="preserve">
-    <value>officialSiteToolStripMenuItem</value>
-  </data>
-  <data name="woWsStatsNumbersToolStripMenuItem.Text" xml:space="preserve">
-    <value>WoWs Numbers</value>
+  <data name="&gt;&gt;gameDirectoryLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;uninstallGameBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="miscanellousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 20</value>
+    <value>102, 21</value>
   </data>
   <data name="mainMenu.Text" xml:space="preserve">
     <value>menuStrip1</value>
@@ -627,22 +642,19 @@
     <value>55, 62</value>
   </data>
   <data name="fixToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
-  </data>
-  <data name="launchGameBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
+    <value>217, 22</value>
   </data>
   <data name="pathBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="officialSiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>217, 22</value>
   </data>
-  <data name="&gt;&gt;trainingRoom.Name" xml:space="preserve">
-    <value>trainingRoom</value>
+  <data name="launchGameBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 135</value>
   </data>
-  <data name="wOWSStatWebsiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>WOWS Stats Website</value>
+  <data name="&gt;&gt;mainMenu.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;replayMode.Parent" xml:space="preserve">
     <value>$this</value>
@@ -650,32 +662,29 @@
   <data name="pathBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 20</value>
   </data>
-  <data name="&gt;&gt;fixToolStripMenuItem.Name" xml:space="preserve">
-    <value>fixToolStripMenuItem</value>
+  <data name="wOWSStatWebsiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>WOWS Stats Website</value>
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="trainingRoom.Text" xml:space="preserve">
-    <value>Enable Training Room</value>
+  <data name="&gt;&gt;gameDirectoryLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;openGameDirectoryToolStripMenuItem.Name" xml:space="preserve">
     <value>openGameDirectoryToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;mainMenu.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;launchGameBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;pathBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="launchGameBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 23</value>
   </data>
   <data name="openGameDirectoryToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Game Directory</value>
   </data>
   <data name="uninstallGameBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 23</value>
-  </data>
-  <data name="&gt;&gt;gameDirectoryLabel.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;launchGameBtn.Name" xml:space="preserve">
     <value>launchGameBtn</value>
@@ -689,29 +698,23 @@
   <data name="&gt;&gt;replayMode.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>WOWS Training Room</value>
+  <data name="&gt;&gt;pathBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;gameDirectoryLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 24</value>
+  <data name="woWsStatsNumbersToolStripMenuItem.Text" xml:space="preserve">
+    <value>WoWs Numbers</value>
   </data>
   <data name="openReplayFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>217, 22</value>
   </data>
   <data name="warshipsTodayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
+    <value>172, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+    <value>55, 21</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>WOWS</value>
-  </data>
-  <data name="launchGameBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 135</value>
   </data>
   <data name="pathBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 109</value>
@@ -724,9 +727,6 @@
   </data>
   <data name="&gt;&gt;uninstallGameBtn.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="officialSiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Official Site</value>
   </data>
   <data name="miscanellousToolStripMenuItem.Text" xml:space="preserve">
     <value>Miscellaneous</value>

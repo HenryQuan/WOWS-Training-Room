@@ -32,7 +32,6 @@ namespace WOWS_Training_Room
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WOWS));
-       
             this.trainingRoom = new System.Windows.Forms.Button();
             this.replayMode = new System.Windows.Forms.Button();
             this.pathBox = new System.Windows.Forms.TextBox();

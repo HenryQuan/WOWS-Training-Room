@@ -105,6 +105,7 @@
     <EmbeddedResource Include="aboutForm.zh-Hans.resx">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="zh-Hans\WOWS Training Room.resources.dll" />
     <EmbeddedResource Include="gamePath.resx">
       <DependentUpon>gamePath.cs</DependentUpon>
     </EmbeddedResource>

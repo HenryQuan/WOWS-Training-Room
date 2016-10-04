@@ -102,14 +102,7 @@
     <EmbeddedResource Include="aboutForm.resx">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="aboutForm.zh-Hans.resx">
-      <DependentUpon>aboutForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="zh-Hans\WOWS Training Room.resources.dll" />
     <EmbeddedResource Include="gamePath.resx">
-      <DependentUpon>gamePath.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gamePath.zh-Hans.resx">
       <DependentUpon>gamePath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -126,9 +119,6 @@
       <LastGenOutput>GlobalText.zh-Hans.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="WOWS.resx">
-      <DependentUpon>WOWS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WOWS.zh-Hans.resx">
       <DependentUpon>WOWS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

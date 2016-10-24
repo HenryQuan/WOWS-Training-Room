@@ -139,6 +139,28 @@ namespace WOWS_Training_Room
             return isEnabled;
         }
 
+        // Check if training room is enabled
+        public static bool isDownloadBoostEnabled()
+        {
+            bool isEnabled = false;
+
+            if (isGamePathLegal(getData(PATH)))
+            {
+                // Get the path for preferences.xml
+                string preference = getData(PATH) + @"\WoWSLauncher.cfg";
+                string temp = File.ReadAllText(preference);
+
+                if (temp.Contains(@"<launcher_transport>2</launcher_transport>"))
+                {
+                    isEnabled = true;
+                }
+
+                Console.WriteLine(Convert.ToString(isEnabled));
+            }
+
+            return isEnabled;
+        }
+
         // Check whether user provides correct game path
         public static bool isGamePathLegal(string gamepath)
         {

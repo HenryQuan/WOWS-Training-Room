@@ -121,6 +121,9 @@
     <EmbeddedResource Include="WOWS.resx">
       <DependentUpon>WOWS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WOWS.zh-Hans.resx">
+      <DependentUpon>WOWS.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

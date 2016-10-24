@@ -16,6 +16,9 @@ namespace WOWS_Training_Room
         string TRAINING_DISABLE = GlobalText.CLOSE_TRAINING;
         string REPLAY_ENABLE = GlobalText.OPEN_REPLAY;
         string REPLAY_DISABLE = GlobalText.CLOSE_REPLAY;
+        string DOWNLOADBOOST_ENABLE = @"Enable Download Boost";
+        string DOWNLOADBOOST_DISABLE = @"Disable Download Boost";
+
 
         // Constants for whether training room and replay mode is enabled.
         public const string ENABLED = "1";
@@ -43,6 +46,7 @@ namespace WOWS_Training_Room
         const string TEMP_GAME = @"temp.wowsreplay";
         const string EXTENSION_NAME = @"wowsreplay";
         const string RES_MOD = @"\res_mods";
+        const string WOWSLauncher = @"\WoWSLauncher.cfg";
 
         public WOWS()
         {
@@ -101,6 +105,7 @@ namespace WOWS_Training_Room
             // Load correct text for training room and replay mode
             bool training = DataStorage.isTrainingRoomEnabled();
             bool replay = DataStorage.isReplayModeEnabled();
+            bool download = DataStorage.isDownloadBoostEnabled();
             bool backup = DataStorage.isBackup();
             // Only if the path is correct, we could do some stuff
             if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true)
@@ -112,6 +117,10 @@ namespace WOWS_Training_Room
                 if (replay == true)
                 {
                     this.replayMode.Text = REPLAY_DISABLE;
+                }
+                if (download == true)
+                {
+                    this.downloadBoostBtn.Text = DOWNLOADBOOST_DISABLE;
                 }
             }
 
@@ -506,6 +515,40 @@ namespace WOWS_Training_Room
                     MessageBox.Show(GlobalText.NO_MOD);
                 }
             }
+        }
+
+        private void downloadBoostBtn_Click(object sender, EventArgs e)
+        {
+            // Check if path is correct
+            var preference = DataStorage.getData(DataStorage.PATH) + WOWSLauncher;
+
+            // Not quite a quick mathod, but you do the same way
+            var temp = File.ReadAllText(preference);
+
+            // Change the text for this button
+            if (downloadBoostBtn.Text == DOWNLOADBOOST_ENABLE)
+            {
+                downloadBoostBtn.Text = DOWNLOADBOOST_DISABLE;
+
+                if (temp.Contains(@"<launcher_transport>3</launcher_transport>"))
+                {
+                    temp = temp.Replace(@"<launcher_transport>3</launcher_transport>", @"<launcher_transport>2</launcher_transport>");
+                }
+            }
+            else
+            {
+                downloadBoostBtn.Text = DOWNLOADBOOST_ENABLE;
+                if (temp.Contains(@"<launcher_transport>2</launcher_transport>"))
+                {
+                    temp = temp.Replace(@"<launcher_transport>2</launcher_transport>", @"<launcher_transport>3</launcher_transport>");
+                }
+            }
+
+            // Save changes to preferences.xml
+            File.WriteAllText(preference, temp);
+
+            // Only could do this once per launch
+            downloadBoostBtn.Enabled = false;
         }
     }
 }

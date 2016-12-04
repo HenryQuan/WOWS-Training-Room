@@ -170,7 +170,8 @@ namespace WOWS_Training_Room
             if (DataStorage.isGamePathLegal(DataStorage.getData(DataStorage.PATH)) == true)
             {
                 // Check if path is correct
-                var preference = DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML;
+                //var preference = DataStorage.getData(DataStorage.PATH) + DataStorage.PREFER_XML;
+                var preference = DataStorage.getData(DataStorage.PATH) + DataStorage.SCRIPTS_XML;
 
                 // Not quite a quick mathod, but you do the same way
                 var temp = File.ReadAllText(preference);
@@ -180,14 +181,15 @@ namespace WOWS_Training_Room
                 {
                     trainingRoom.Text = TRAINING_DISABLE;
 
-                    if (temp.Contains(DataStorage.RANDOM_BATTLE))
+                    /*if (temp.Contains(DataStorage.RANDOM_BATTLE))
                     {
                         temp = temp.Replace(DataStorage.RANDOM_BATTLE, DataStorage.TRAINING_BATTLE);
                     }
                     else if (temp.Contains(DataStorage.COOP_BATTLE))
                     {
                         temp = temp.Replace(DataStorage.COOP_BATTLE, DataStorage.TRAINING_BATTLE);
-                    }
+                    }*/
+                    temp = temp.Replace(@"<disableTrainingRoom>true</disableTrainingRoom>", @"<disableTrainingRoom>false</disableTrainingRoom>");
                     
                     // Ssave changes to data.txt
                     string oldTraining = DataStorage.getData(DataStorage.TRAINING);
@@ -196,7 +198,9 @@ namespace WOWS_Training_Room
                 else
                 {
                     trainingRoom.Text = TRAINING_ENABLE;
-                    temp = temp.Replace(DataStorage.TRAINING_BATTLE, DataStorage.RANDOM_BATTLE);
+
+                    /*temp = temp.Replace(DataStorage.TRAINING_BATTLE, DataStorage.RANDOM_BATTLE);*/
+                    temp = temp.Replace(@"<disableTrainingRoom>false</disableTrainingRoom>", @"<disableTrainingRoom>true</disableTrainingRoom>");
 
                     // save changes to data.txt
                     string oldTraining = DataStorage.getData(DataStorage.TRAINING);

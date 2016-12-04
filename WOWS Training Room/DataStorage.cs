@@ -25,6 +25,7 @@ namespace WOWS_Training_Room
         public const string GAME_EXE = @"\WoWSLauncher.exe";
         public const string UNINSTALL_EXE = @"\unins000.exe";
         public const string PREFER_XML = @"\preferences.xml";
+        public const string SCRIPTS_XML = @"\res\scripts_config.xml";
 
         // Constants for replay mode
         public const string SCRIPTS = @"scriptsPreferences";
@@ -104,10 +105,10 @@ namespace WOWS_Training_Room
             if (isGamePathLegal(getData(PATH)))
             {
                 // Get the path for preferences.xml
-                string preference = getData(PATH) + PREFER_XML;
+                string preference = getData(PATH) + SCRIPTS_XML;
                 string temp = File.ReadAllText(preference);
 
-                if (temp.Contains(TRAINING_BATTLE))
+                if (temp.Contains(@"<disableTrainingRoom>false</disableTrainingRoom>"))
                 {
                     isEnabled = true;
                 }

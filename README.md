@@ -13,3 +13,5 @@ When battle mode is changed, Training room has to be re-enabled.
 
 ### Credit
 Thank *Hox_Warwolf*, *Nostalgia_J*, *cSHIELD*, *xXCOLDBLADEXx* and **HenryQuan** for testing and support.
+
+**WoWs has officially supported Training Room so this is no longer necessary.**
